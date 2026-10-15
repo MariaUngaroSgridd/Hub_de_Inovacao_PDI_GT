@@ -298,8 +298,9 @@
 
       .intro {
         display: grid;
-        grid-template-columns: minmax(190px, 0.8fr) minmax(0, 1.6fr);
-        gap: clamp(2rem, 8vw, 8rem);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        gap: clamp(2rem, 6vw, 5rem);
         padding-block: clamp(4rem, 9vw, 7.5rem);
       }
 
@@ -326,6 +327,17 @@
         color: #424d5b;
         font-size: 1.05rem;
         line-height: 1.8;
+      }
+
+      .intro-image {
+        margin: 0;
+      }
+
+      .intro-image img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
       }
 
       .fronts {
@@ -643,11 +655,14 @@
       </section>
 
       <section class="wrap intro" id="sobre" aria-labelledby="intro-title">
-        <p class="section-label">Inovação em movimento</p>
         <div class="intro-copy">
+          <p class="section-label">Inovação em movimento</p>
           <h2 id="intro-title">Conhecimento que encontra desafios reais.</h2>
           <p>O Hub de Pesquisa, Desenvolvimento e Inovação (PDI) em Geração e Transmissão (GT) reúne iniciativas, aprendizados e oportunidades de colaboração. Um ponto de partida para descobrir como a pesquisa e o desenvolvimento podem abrir caminhos para novas soluções.</p>
         </div>
+        <figure class="intro-image">
+          <img src="assets/barco-eletrico-dji.jpg" alt="Barco elétrico visto do alto navegando em um reservatório cercado por vegetação.">
+        </figure>
       </section>
 
       <section class="fronts" id="frentes" aria-labelledby="fronts-title">
