@@ -1,12 +1,11 @@
-# Hub_de_Inovacao_PDI_GT
+# Hub de Inovação PDI GT
 
-Página inicial personalizada para o repositório **Hub_de_Inovacao_PDI_GT**.
+Página responsiva para apresentar o Hub de Inovação PDI GT e suas áreas de pesquisa, desenvolvimento e inovação. O layout usa conteúdo original, linguagem clara e uma paleta inspirada nas diretrizes visuais fornecidas. Os arquivos em `assets` incluem a logo e imagens fornecidas para a página, conforme autorização informada, além do recorte circular utilizado no destaque. A seção de ideias direciona ao formulário externo do Microsoft Forms.
 
-## Publicar no GitHub Pages
+## Visualizar localmente
 
-1. Crie no GitHub um repositório chamado `Hub_de_Inovacao_PDI_GT`.
-2. Envie `index.html` e `README.md` para a raiz do repositório.
-3. No repositório, abra **Settings → Pages**.
-4. Em **Build and deployment**, escolha **Deploy from a branch**, selecione a branch principal e a pasta `/ (root)`, e salve.
+Abra `index.html` em um navegador. A página não precisa de dependências nem de conexão para exibir o layout.
 
-A página ficará disponível no endereço do GitHub Pages exibido nessa mesma tela de configurações.
+## Publicar atualizações
+
+O repositório público é [Hub_de_Inovacao_PDI_GT](https://github.com/MariaUngaroSgridd/Hub_de_Inovacao_PDI_GT), e o GitHub Pages publica a partir da branch principal e da pasta raiz. Para publicar uma versão atualizada, envie o `index.html` e a pasta `assets` para essa raiz e confira a implantação em **Actions → pages build and deployment**.
