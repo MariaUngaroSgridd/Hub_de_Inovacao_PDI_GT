@@ -460,6 +460,19 @@ nav a[aria-current="page"] {
   font-size: 1.3rem;
 }
 
+.recognition-description {
+  margin: 0.7rem 0 1rem;
+  color: #424d5b;
+  line-height: 1.6;
+}
+
+.recognition-image {
+  width: 100%;
+  display: block;
+  margin-top: 0.5rem;
+  object-fit: cover;
+}
+
 .project-media {
   margin: 0;
 }
