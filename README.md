@@ -12,4 +12,4 @@ O repositório público é [Hub_de_Inovacao_PDI_GT](https://github.com/MariaUnga
 
 As publicações do projeto de Hidrogênio Verde incluem o livro e os PDFs integrais, armazenados em `assets`. O vídeo do Barco Elétrico foi otimizado para web; o arquivo original não foi alterado.
 
-Na página `artigos.html`, use os filtros de projeto, tema e busca textual para localizar materiais. Para adicionar um item, crie um cartão com `data-filterable`, `data-project`, `data-topic` e `data-search-text`; os valores de projeto e tema devem corresponder às opções dos filtros.
+Na página `artigos.html`, livros e artigos aparecem juntos em uma única lista. Use os filtros de projeto, tema e busca textual para localizar publicações. O projeto Barco Elétrico fica apenas na área de projetos de Geração, não na lista de publicações. Para adicionar uma publicação, crie um cartão com `data-filterable`, `data-project`, `data-topic` e `data-search-text`; os valores de projeto e tema devem corresponder às opções dos filtros.
