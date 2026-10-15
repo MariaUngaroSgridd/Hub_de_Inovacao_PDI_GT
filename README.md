@@ -1,6 +1,6 @@
 # Hub de Inovação PDI GT
 
-Site responsivo do Hub de Inovação PDI GT, com páginas para as áreas de Geração e Transmissão, projetos, publicações e envio de ideias. Os projetos de Hidrogênio Verde e Barco Elétrico possuem conteúdo organizado por iniciativa; a página do barco apresenta foto e vídeo de navegação. O layout usa conteúdo original, linguagem clara e uma paleta inspirada nas diretrizes visuais fornecidas. A seção de ideias direciona ao formulário externo do Microsoft Forms.
+Site responsivo do Hub de Inovação PDI GT, com páginas para as áreas de Geração e Transmissão, projetos, publicações e envio de ideias. Os projetos de Hidrogênio Verde e Barco Elétrico possuem conteúdo organizado por iniciativa; a página de Hidrogênio Verde reúne imagens e reconhecimentos, enquanto a página do barco apresenta vídeo de navegação. O layout usa conteúdo original, linguagem clara e uma paleta inspirada nas diretrizes visuais fornecidas. A seção de ideias direciona ao formulário externo do Microsoft Forms.
 
 ## Visualizar localmente
 
