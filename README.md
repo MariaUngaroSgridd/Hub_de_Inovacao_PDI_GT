@@ -1,6 +1,6 @@
 # Hub de Inovação PDI GT
 
-Site responsivo do Hub de Inovação PDI GT, com páginas para as áreas de Geração e Transmissão, projetos, publicações e envio de ideias. Os projetos de Hidrogênio Verde e Barco Elétrico possuem conteúdo organizado por iniciativa; o barco tem uma foto publicada na página. O layout usa conteúdo original, linguagem clara e uma paleta inspirada nas diretrizes visuais fornecidas. A seção de ideias direciona ao formulário externo do Microsoft Forms.
+Site responsivo do Hub de Inovação PDI GT, com páginas para as áreas de Geração e Transmissão, projetos, publicações e envio de ideias. Os projetos de Hidrogênio Verde e Barco Elétrico possuem conteúdo organizado por iniciativa; a página do barco apresenta foto e vídeo de navegação. O layout usa conteúdo original, linguagem clara e uma paleta inspirada nas diretrizes visuais fornecidas. A seção de ideias direciona ao formulário externo do Microsoft Forms.
 
 ## Visualizar localmente
 
@@ -10,4 +10,6 @@ Abra `index.html` em um navegador. As páginas `artigos.html`, `projeto-hidrogen
 
 O repositório público é [Hub_de_Inovacao_PDI_GT](https://github.com/MariaUngaroSgridd/Hub_de_Inovacao_PDI_GT), e o GitHub Pages publica a partir da branch principal e da pasta raiz. Para publicar uma versão atualizada, envie `index.html`, `artigos.html`, `projeto-hidrogenio-verde.html`, `projeto-barco-eletrico.html`, `inner-pages.css` e a pasta `assets` para essa raiz e confira a implantação em **Actions → pages build and deployment**.
 
-As publicações do projeto de Hidrogênio Verde incluem o livro e os PDFs integrais, armazenados em `assets`. A página do Barco Elétrico usa a foto fornecida. O vídeo recebido não está incluído nesta versão.
+As publicações do projeto de Hidrogênio Verde incluem o livro e os PDFs integrais, armazenados em `assets`. O vídeo do Barco Elétrico foi otimizado para web; o arquivo original não foi alterado.
+
+Na página `artigos.html`, use os filtros de projeto, tema e busca textual para localizar materiais. Para adicionar um item, crie um cartão com `data-filterable`, `data-project`, `data-topic` e `data-search-text`; os valores de projeto e tema devem corresponder às opções dos filtros.

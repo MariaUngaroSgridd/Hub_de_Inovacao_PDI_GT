@@ -43,7 +43,40 @@
         </div>
       </section>
 
-      <section class="content-section" id="hidrogenio-verde" aria-labelledby="articles-title">
+      <section class="content-section filter-section" aria-label="Filtros de projetos e publicações">
+        <div class="wrap">
+          <div class="filter-panel">
+            <div class="filter-field">
+              <label for="project-filter">Projeto</label>
+              <select id="project-filter">
+                <option value="todos">Todos os projetos</option>
+                <option value="hidrogenio-verde">Hidrogênio Verde</option>
+                <option value="barco-eletrico">Barco Elétrico</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="topic-filter">Tema</label>
+              <select id="topic-filter">
+                <option value="todos">Todos os temas</option>
+                <option value="livro">Livros</option>
+                <option value="mercado">Mercado e indústria</option>
+                <option value="transporte">Transporte e armazenamento</option>
+                <option value="financiamento">Financiamento e políticas</option>
+                <option value="hubs">Hubs industriais</option>
+                <option value="multimidia">Fotos e vídeos</option>
+              </select>
+            </div>
+            <div class="filter-field filter-search">
+              <label for="publication-search">Buscar</label>
+              <input id="publication-search" type="search" placeholder="Digite um título, tema ou autor">
+            </div>
+            <button class="filter-reset" id="filter-reset" type="button">Limpar filtros</button>
+          </div>
+          <p class="filter-count" id="filter-count" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="content-section" id="hidrogenio-verde" data-project-group="hidrogenio-verde" aria-labelledby="articles-title">
         <div class="wrap">
           <div class="section-heading">
             <p class="section-label">Hidrogênio Verde · Transmissão</p>
@@ -51,7 +84,7 @@
             <p>Livro e artigos relacionados ao mercado brasileiro, financiamento, hubs industriais e transporte e armazenamento. Leia os resumos e abra cada PDF para consultar o texto completo.</p>
           </div>
           <div class="article-grid">
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="livro" data-search-text="livro um caminho para o mercado de hidrogenio baixo carbono brasil nivalde castro ana carolina chaves gesel pecem">
               <p class="article-type">Livro · Projeto Pecém H₂V</p>
               <h3>Um caminho para o mercado de hidrogênio de baixo carbono no Brasil</h3>
               <p class="article-meta">Organizadores: Nivalde de Castro, Ana Carolina Chaves, Mauricio Moszkowicz, Eduardo Serra e Sayonara Eliziário. GESEL/UFRJ, em parceria com a EDP, no âmbito do projeto Pecém H₂V.</p>
@@ -59,7 +92,7 @@
               <a class="article-download" href="assets/livro-hidrogenio-baixo-carbono-brasil.pdf" target="_blank" rel="noopener noreferrer">Ler livro completo (PDF)</a>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="mercado" data-search-text="green industrial development brazil renewable hydrogen derivatives mercado industria luiza leal ana carolina chaves">
               <p class="article-type">Mercado e desenvolvimento industrial</p>
               <h3>Green Industrial Development in Brazil: Opportunities in the National and International Markets for Renewable Hydrogen and Derivatives</h3>
               <p class="article-meta">Luiza Masseno de Pinho Santiago Leal, Ana Carolina Chaves Catolico, Kalyne Silva Brito e Vinicius José Novaes Braz da Costa.</p>
@@ -67,7 +100,7 @@
               <a class="article-download" href="assets/desenvolvimento-industrial-hidrogenio-renovavel.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="transporte" data-search-text="amonia metanol portadores hidrogenio armazenamento transporte sofia paoli kalyne brito">
               <p class="article-type">Transporte e armazenamento</p>
               <h3>Análise comparativa dos parâmetros técnicos da amônia e do metanol como portadores de hidrogênio</h3>
               <p class="article-meta">Sofia Paoli, Kalyne Brito, José Vinícius Freitas e Thereza Aquino.</p>
@@ -75,7 +108,7 @@
               <a class="article-download" href="assets/portadores-amonia-metanol.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="financiamento" data-search-text="financing green hydrogen projects german australian brazil financiamento politicas thereza aquino">
               <p class="article-type">Financiamento e políticas públicas · 2022</p>
               <h3>The Role of Financing in Green Hydrogen Projects: The German, Australian and Brazilian Cases</h3>
               <p class="article-meta">Thereza Aquino, Roberto Ivo, Vinicius Botelho, Ana Carolina Chaves, Lourival Teixeira, Cayo Moraes, Diego Rebouças e Willamy Conde. 5th International Conference on Energy and Environment, Porto, Portugal.</p>
@@ -83,7 +116,7 @@
               <a class="article-download" href="assets/financiamento-projetos-hidrogenio-verde-2022.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="hubs" data-search-text="industrial clusters hydrogen economy united states europe australia hubs industriais kalyne brito ana carolina">
               <p class="article-type">Hubs industriais e economia do hidrogênio · 2024</p>
               <h3>The Role of Industrial Clusters in the Development of the Hydrogen Economy: A Comparison between United States, Europe, Australia</h3>
               <p class="article-meta">Kalyne Brito, Ana Carolina Chaves, Thereza Aquino, Luiza Masseno e Caroline Chantre. 6th International Conference on Energy and Environment, Guimarães, Portugal.</p>
@@ -91,7 +124,7 @@
               <a class="article-download" href="assets/hubs-industriais-hidrogenio-2024.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="mercado" data-search-text="die entwicklung marktes grunen wasserstoff brasilien internationale zusammenarbeit alemanha luiza masseno">
               <p class="article-type">Mercado brasileiro e cooperação internacional · Alemão</p>
               <h3>Die Entwicklung des Marktes für grünen Wasserstoff in Brasilien und Möglichkeiten der internationalen Zusammenarbeit</h3>
               <p class="article-meta">Luiza Masseno Leal, Vinicius José Braz, Thereza Aquino, Ana Carolina Chaves e Maurício Moszkowicz.</p>
@@ -107,13 +140,22 @@
         </div>
       </section>
 
-      <section class="content-section alt" id="barco-eletrico" aria-labelledby="boat-project-title">
+      <section class="content-section alt" id="barco-eletrico" data-project-group="barco-eletrico" aria-labelledby="boat-project-title">
         <div class="wrap">
           <div class="section-heading">
             <p class="section-label">Geração · Conteúdo multimídia</p>
             <h2 id="boat-project-title">Projeto: Barco Elétrico</h2>
-            <p>Este projeto será apresentado por meio de fotos e vídeos de navegação e testes. Acesse a página do projeto para ver o material visual disponível.</p>
+            <p>Projeto da área de Geração, com registros visuais de navegação e testes. Acesse a página do projeto para conhecer o material disponível.</p>
           </div>
+          <article class="project-card" data-filterable data-project="barco-eletrico" data-topic="multimidia" data-search-text="barco eletrico geracao navegacao foto video testes">
+            <img src="assets/barco-eletrico.jpg" alt="Barco elétrico navegando em um reservatório">
+            <div>
+              <p class="article-type">Geração · Conteúdo multimídia</p>
+              <h3>Barco Elétrico</h3>
+              <p>Veja a fotografia e assista ao vídeo do barco em navegação.</p>
+              <a class="article-download" href="projeto-barco-eletrico.html">Abrir página do projeto</a>
+            </div>
+          </article>
           <div class="page-actions">
             <a class="button" href="projeto-barco-eletrico.html">Conheça o Barco Elétrico</a>
             <a class="button button-secondary" href="index.html#geracao">Voltar à área de Geração</a>
@@ -128,5 +170,50 @@
         <p><a href="https://github.com/MariaUngaroSgridd/Hub_de_Inovacao_PDI_GT">Repositório do projeto</a></p>
       </div>
     </footer>
+    <script>
+      const projectFilter = document.querySelector("#project-filter");
+      const topicFilter = document.querySelector("#topic-filter");
+      const searchInput = document.querySelector("#publication-search");
+      const filterCount = document.querySelector("#filter-count");
+      const filterableItems = [...document.querySelectorAll("[data-filterable]")];
+      const projectGroups = [...document.querySelectorAll("[data-project-group]")];
+
+      function filterProjects() {
+        const project = projectFilter.value;
+        const topic = topicFilter.value;
+        const normalizeText = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+        const query = normalizeText(searchInput.value.trim());
+        let visibleCount = 0;
+
+        for (const item of filterableItems) {
+          const matchesProject = project === "todos" || item.dataset.project === project;
+          const matchesTopic = topic === "todos" || item.dataset.topic === topic;
+          const matchesQuery = !query || normalizeText(item.dataset.searchText).includes(query);
+          const visible = matchesProject && matchesTopic && matchesQuery;
+          item.hidden = !visible;
+          if (visible) visibleCount += 1;
+        }
+
+        for (const group of projectGroups) {
+          const matchesProject = project === "todos" || group.dataset.projectGroup === project;
+          const hasVisibleItems = group.querySelector("[data-filterable]:not([hidden])");
+          group.hidden = !matchesProject || !hasVisibleItems;
+        }
+
+        filterCount.textContent = `${visibleCount} ${visibleCount === 1 ? "resultado encontrado" : "resultados encontrados"}`;
+      }
+
+      projectFilter.addEventListener("change", filterProjects);
+      topicFilter.addEventListener("change", filterProjects);
+      searchInput.addEventListener("input", filterProjects);
+      document.querySelector("#filter-reset").addEventListener("click", () => {
+        projectFilter.value = "todos";
+        topicFilter.value = "todos";
+        searchInput.value = "";
+        filterProjects();
+        projectFilter.focus();
+      });
+      filterProjects();
+    </script>
   </body>
 </html>
