@@ -115,17 +115,79 @@
       nav {
         display: flex;
         align-items: center;
-        gap: clamp(1rem, 3vw, 2.5rem);
+        justify-content: center;
+        gap: clamp(0.65rem, 1.5vw, 1.25rem);
       }
 
-      nav a {
+      nav > a,
+      nav summary {
+        padding-block: 0.6rem 0.55rem;
+        border-bottom: 3px solid transparent;
+        color: var(--marine);
+        font-family: inherit;
         text-decoration: none;
         font-size: 0.9rem;
         font-weight: 700;
       }
 
-      nav a:hover {
+      nav > a:hover,
+      nav summary:hover {
         color: var(--seaweed);
+        border-bottom-color: #263cc8;
+      }
+
+      .nav-dropdown {
+        position: relative;
+      }
+
+      .nav-dropdown summary {
+        display: block;
+        cursor: pointer;
+        list-style: none;
+      }
+
+      .nav-dropdown summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .nav-dropdown[open] summary {
+        color: var(--seaweed);
+        border-bottom-color: #263cc8;
+      }
+
+      .nav-submenu {
+        position: absolute;
+        z-index: 5;
+        top: calc(100% + 0.8rem);
+        left: -1rem;
+        min-width: 180px;
+        display: grid;
+        gap: 0.15rem;
+        padding: 0.5rem;
+        border: 1px solid #e0e8e8;
+        background: var(--white);
+        box-shadow: 0 12px 30px rgb(33 46 62 / 16%);
+      }
+
+      .nav-submenu a {
+        padding: 0.7rem 0.8rem;
+        border-radius: 2px;
+        color: var(--marine);
+        font-family: inherit;
+        font-size: 0.88rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .nav-submenu a:hover {
+        background: #e8efed;
+        color: var(--seaweed);
+      }
+
+      nav a:focus-visible,
+      nav summary:focus-visible {
+        outline: 3px solid var(--seaweed);
+        outline-offset: 4px;
       }
 
       .hero {
@@ -271,6 +333,27 @@
         background: #e8efed;
       }
 
+      .articles {
+        padding-block: clamp(4rem, 8vw, 6rem);
+        background: var(--white);
+      }
+
+      .articles h2 {
+        margin-top: 0.7rem;
+      }
+
+      .articles-empty {
+        max-width: 720px;
+        margin: 1.2rem 0 0;
+        color: #424d5b;
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      .articles .button {
+        margin-top: 1.2rem;
+      }
+
       .section-heading {
         display: block;
         margin-bottom: 2.2rem;
@@ -337,6 +420,15 @@
         margin: 0;
         color: #424d5b;
         line-height: 1.7;
+      }
+
+      .card-link {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--seaweed);
+        font-weight: 800;
+        line-height: 1.5;
+        text-underline-offset: 3px;
       }
 
       .closing {
@@ -420,14 +512,20 @@
 
         nav {
           width: 100%;
-          justify-content: space-between;
-          gap: 0.8rem;
+          justify-content: flex-start;
+          gap: 0.75rem;
           padding-top: 0.65rem;
           border-top: 1px solid #e8efed;
         }
 
-        nav a {
+        nav > a,
+        nav summary {
           font-size: 0.82rem;
+          white-space: nowrap;
+        }
+
+        .nav-submenu {
+          left: 0;
         }
 
         .hero {
@@ -517,9 +615,15 @@
         </a>
         <nav aria-label="Navegação principal">
           <a href="#inicio">Início</a>
-          <a href="#frentes">Áreas de atuação</a>
-          <a href="#sobre">Sobre o hub</a>
-          <a href="#enviar-ideia">Enviar ideia</a>
+          <details class="nav-dropdown">
+            <summary>Áreas de Atuação</summary>
+            <div class="nav-submenu">
+              <a href="#geracao">Geração</a>
+              <a href="#transmissao">Transmissão</a>
+            </div>
+          </details>
+          <a href="artigos.html">Artigos</a>
+          <a href="#enviar-ideia">Enviar Ideia</a>
         </nav>
       </div>
     </header>
@@ -556,21 +660,31 @@
             <p class="section-note">Conheça as áreas de Geração e Transmissão e os desafios que orientam a inovação em cada uma.</p>
           </div>
           <div class="card-grid">
-            <article class="card">
+            <article class="card" id="geracao">
               <img class="card-image" src="assets/geracao.png" alt="Usina hidrelétrica de geração de energia ao entardecer">
               <div class="card-content">
                 <h3>Geração</h3>
                 <p>Pesquisa e inovação voltadas aos desafios de geração de energia, buscando desenvolver e avaliar novas soluções para essa área.</p>
               </div>
             </article>
-            <article class="card">
+            <article class="card" id="transmissao">
               <img class="card-image" src="assets/transmissao.png" alt="Linhas e torres de transmissão de energia ao pôr do sol">
               <div class="card-content">
                 <h3>Transmissão</h3>
                 <p>Pesquisa e inovação voltadas aos desafios de transmissão de energia, explorando oportunidades de desenvolvimento e melhoria de soluções.</p>
+                <a class="card-link" href="projeto-hidrogenio-verde.html">Conheça a iniciativa de Hidrogênio Verde</a>
               </div>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="articles" id="artigos" aria-labelledby="articles-title">
+        <div class="wrap">
+          <p class="section-label">Conhecimento em destaque</p>
+          <h2 id="articles-title">Artigos</h2>
+          <p class="articles-empty">Explore pesquisas sobre hidrogênio verde, financiamento, hubs industriais e soluções para transporte e armazenamento.</p>
+          <a class="button" href="artigos.html">Acessar artigos</a>
         </div>
       </section>
 
