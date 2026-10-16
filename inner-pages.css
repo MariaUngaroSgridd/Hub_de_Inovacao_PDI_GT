@@ -470,7 +470,7 @@ nav a[aria-current="page"] {
   width: 100%;
   display: block;
   margin-top: 0.5rem;
-  object-fit: cover;
+  object-fit: contain; height: auto;
 }
 
 .project-media {
