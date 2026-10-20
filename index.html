@@ -641,6 +641,8 @@
       }
     </style>
       <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="edp-layout.css">
+    <script src="navigation.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -687,7 +689,9 @@
             <span>Pesquisa · Desenvolvimento · Inovação</span>
           </span>
         </a>
-        <nav aria-label="Navegação principal">
+        <details class="mobile-navigation" open>
+          <summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg><span>Menu</span></summary>
+          <nav aria-label="Navegação principal">
           <a href="#inicio">Início</a>
           <details class="nav-dropdown">
             <summary>Áreas de Atuação</summary>
@@ -700,7 +704,8 @@
           <a href="artigos.html">Artigos</a>
           <a href="premios.html">Prêmios</a>
           <a href="enviar-ideia.html">Enviar Ideia</a>
-        </nav>
+          </nav>
+        </details>
       </div>
     </header>
 
