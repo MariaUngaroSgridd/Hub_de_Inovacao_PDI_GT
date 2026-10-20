@@ -58,6 +58,9 @@ a:focus-visible {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: var(--white);
 }
 
@@ -102,7 +105,9 @@ nav {
   gap: clamp(0.65rem, 1.5vw, 1.25rem);
 }
 
-nav a {
+nav > a,
+nav summary {
+  display: block;
   padding-block: 0.6rem 0.55rem;
   border-bottom: 3px solid transparent;
   color: var(--marine);
@@ -112,10 +117,54 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover,
+nav > a:hover,
+nav summary:hover,
 nav a[aria-current="page"] {
   border-bottom-color: #263cc8;
   color: var(--seaweed);
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-dropdown[open] summary {
+  border-bottom-color: #263cc8;
+  color: var(--seaweed);
+}
+
+.nav-submenu {
+  position: absolute;
+  z-index: 11;
+  top: calc(100% + 0.8rem);
+  left: -1rem;
+  min-width: 180px;
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.5rem;
+  border: 1px solid #e0e8e8;
+  background: var(--white);
+  box-shadow: 0 12px 30px rgb(33 46 62 / 16%);
+}
+
+.nav-submenu a {
+  padding: 0.7rem 0.8rem;
+  border: 0;
+  border-radius: 2px;
+  font-size: 0.88rem;
+}
+
+.nav-submenu a:hover {
+  background: #e8efed;
 }
 
 .page-hero {
@@ -581,7 +630,8 @@ footer a {
     border-top: 1px solid #e8efed;
   }
 
-  nav a {
+  nav > a,
+  nav summary {
     font-size: 0.82rem;
   }
 
