@@ -1,0 +1,230 @@
+/* Shared footer inspired by the EDP Brazil site */
+.edp-footer {
+  margin: 0;
+  padding: 0;
+  background: #212e3e;
+  color: #fff;
+  font-family: inherit;
+}
+
+.edp-footer-main {
+  padding: 2.5rem 0 3.5rem;
+  background: #212e3e;
+}
+
+.edp-footer .wrap {
+  width: min(1500px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.edp-footer-top {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.edp-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.edp-logo-mark {
+  width: 190px;
+  height: 85px;
+  display: block;
+  flex: 0 0 190px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.edp-carbon {
+  width: min(390px, 100%);
+  display: grid;
+  gap: 0.35rem;
+  padding: 1rem 1.25rem;
+  border-radius: 3px;
+  background: #3f4b5b;
+  text-align: center;
+}
+
+.edp-carbon strong {
+  font-size: 1.15rem;
+}
+
+.edp-carbon span,
+.edp-carbon a {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.edp-carbon a,
+.edp-footer a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.edp-footer-links {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr 0.9fr 1fr 1fr;
+  gap: clamp(1.2rem, 3vw, 3rem);
+}
+
+.edp-footer-group h2,
+.edp-social h2 {
+  margin: 0 0 1.7rem;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.edp-footer-group ul,
+.edp-social ul {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.edp-footer-group li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  line-height: 1.5;
+}
+
+.edp-footer-group li > span {
+  width: 1rem;
+  flex: 0 0 1rem;
+  color: #dce7ea;
+  text-align: center;
+}
+
+.edp-footer-divider {
+  height: 1px;
+  margin-top: 3.5rem;
+  background: rgb(255 255 255 / 35%);
+}
+
+.edp-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.edp-footer-bottom address {
+  display: grid;
+  gap: 0.2rem;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.edp-footer-bottom address strong {
+  margin-bottom: 0.7rem;
+}
+
+.edp-social h2 {
+  margin-bottom: 1.2rem;
+}
+
+.edp-social ul {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.edp-social a {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.edp-social a:hover {
+  background: rgb(255 255 255 / 15%);
+}
+
+.edp-footer-legal {
+  padding-block: 1.5rem;
+  background: #f4f7f6;
+  color: #2536bf;
+}
+
+.edp-footer-legal .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.edp-footer-legal a {
+  color: #2536bf;
+}
+
+.edp-footer a:focus-visible {
+  outline: 3px solid #17ef4b;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1000px) {
+  .edp-footer-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 2.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .edp-footer-main {
+    padding-top: 1.5rem;
+  }
+
+  .edp-footer-top,
+  .edp-footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .edp-footer-top {
+    margin-bottom: 2.5rem;
+  }
+
+  .edp-carbon {
+    text-align: left;
+  }
+
+  .edp-footer-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem 1rem;
+  }
+
+  .edp-footer-group h2,
+  .edp-social h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .edp-footer-divider {
+    margin-top: 2rem;
+  }
+
+  .edp-footer-bottom {
+    padding-top: 2rem;
+  }
+
+  .edp-footer-legal .wrap {
+    gap: 1rem 1.5rem;
+  }
+}

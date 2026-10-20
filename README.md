@@ -4,11 +4,11 @@ Site responsivo do Hub de Inovação PDI GT, com páginas para as áreas de Gera
 
 ## Visualizar localmente
 
-Abra `index.html` em um navegador. A página `enviar-ideia.html`, as páginas `artigos.html`, `catalogo-projetos.html`, `projeto-hidrogenio-verde.html` e `projeto-barco-eletrico.html` e a folha `inner-pages.css` devem permanecer na mesma pasta. O site não precisa de dependências para exibir o layout.
+Abra `index.html` em um navegador. As páginas `enviar-ideia.html` e `premios.html`, além de `artigos.html`, `catalogo-projetos.html`, `projeto-hidrogenio-verde.html` e `projeto-barco-eletrico.html` e as folhas `inner-pages.css` e `footer.css` devem permanecer na mesma pasta. O site não precisa de dependências para exibir o layout.
 
 ## Publicar atualizações
 
-O repositório público é [Hub_de_Inovacao_PDI_GT](https://github.com/MariaUngaroSgridd/Hub_de_Inovacao_PDI_GT), e o GitHub Pages publica a partir da branch principal e da pasta raiz. Para publicar uma versão atualizada, envie `index.html`, `enviar-ideia.html`, `artigos.html`, `projeto-hidrogenio-verde.html`, `projeto-barco-eletrico.html`, `inner-pages.css` e a pasta `assets` para essa raiz e confira a implantação em **Actions → pages build and deployment**.
+O repositório público é [Hub_de_Inovacao_PDI_GT](https://github.com/MariaUngaroSgridd/Hub_de_Inovacao_PDI_GT), e o GitHub Pages publica a partir da branch principal e da pasta raiz. Para publicar uma versão atualizada, envie `index.html`, `enviar-ideia.html`, `premios.html`, `artigos.html`, `projeto-hidrogenio-verde.html`, `projeto-barco-eletrico.html`, `inner-pages.css`, `footer.css` e a pasta `assets` para essa raiz e confira a implantação em **Actions → pages build and deployment**.
 
 As publicações do projeto de Hidrogênio Verde incluem o livro e os PDFs integrais, armazenados em `assets`. O vídeo do Barco Elétrico foi otimizado para web; o arquivo original não foi alterado.
 
