@@ -1,4 +1,104 @@
 /* Shared footer inspired by the EDP Brazil site */
+.edp-utility-bar {
+  position: relative;
+  z-index: 20;
+  background: #9bb5b6;
+  color: #25333d;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.edp-utility-inner {
+  width: min(1740px, calc(100% - 48px));
+  min-height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-inline: auto;
+}
+
+.edp-global-link,
+.edp-utility-menu summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.edp-global-link span {
+  border-bottom: 1px solid currentColor;
+  line-height: 1.4;
+}
+
+.edp-global-link svg,
+.edp-utility-menu summary svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.edp-utility-controls {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5.5rem);
+}
+
+.edp-utility-menu {
+  position: relative;
+}
+
+.edp-utility-menu summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.edp-utility-menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.edp-utility-menu summary i {
+  width: 12px;
+  height: 12px;
+  margin: -5px 0 0 0.35rem;
+  transform: rotate(45deg);
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.edp-utility-menu[open] summary i {
+  margin-top: 5px;
+  transform: rotate(225deg);
+}
+
+.edp-utility-dropdown {
+  position: absolute;
+  top: calc(100% + 14px);
+  right: 0;
+  min-width: 190px;
+  display: grid;
+  padding: 0.45rem 0;
+  background: #fff;
+  box-shadow: 0 6px 18px rgb(20 35 45 / 18%);
+}
+
+.edp-utility-dropdown a {
+  padding: 0.65rem 1rem;
+  color: #25333d;
+  text-decoration: none;
+}
+
+.edp-utility-dropdown a:hover,
+.edp-utility-dropdown a:focus-visible {
+  background: #e6eeee;
+}
+
 .edp-footer {
   margin: 0;
   padding: 0;
@@ -13,11 +113,12 @@
 }
 
 .edp-footer .wrap {
-  width: min(1500px, calc(100% - 48px));
+  width: min(1296px, calc(100% - 48px));
   margin-inline: auto;
 }
 
 .edp-footer-top {
+  position: relative;
   min-height: 105px;
   display: flex;
   align-items: center;
@@ -44,23 +145,97 @@
 }
 
 .edp-carbon {
-  width: min(390px, 100%);
+  position: absolute;
+  z-index: 1;
+  top: -73px;
+  right: 0;
+  box-sizing: border-box;
+  width: min(432px, 100%);
   display: grid;
-  gap: 0.35rem;
-  padding: 1rem 1.25rem;
+  justify-items: center;
+  gap: 0.2rem;
+  padding: 0.65rem 1.25rem 0.55rem;
   border-radius: 3px;
   background: #3f4b5b;
   text-align: center;
 }
 
-.edp-carbon strong {
-  font-size: 1.15rem;
+.edp-carbon-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
 }
 
-.edp-carbon span,
-.edp-carbon a {
-  font-size: 0.9rem;
+.edp-carbon-heading svg {
+  width: 32px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.4;
+}
+
+.edp-carbon-heading strong {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+.edp-carbon-value {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
   line-height: 1.5;
+}
+
+.edp-carbon-value sub {
+  font-size: 0.7em;
+}
+
+.edp-carbon-scale {
+  position: relative;
+  width: min(342px, 100%);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 0.35rem;
+  color: #111820;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.edp-carbon-scale > span:not(.edp-carbon-current) {
+  text-align: center;
+}
+
+.grade-a-plus { background: #0bb9bd; }
+.grade-a { background: #16b832; }
+.grade-b { background: #a7ca00; }
+.grade-c { background: #f0d400; }
+.grade-d { background: #ff9900; }
+.grade-e { background: #f04b16; }
+.grade-f { background: #d10e30; color: #fff; }
+
+.edp-carbon-current {
+  position: absolute;
+  top: 50%;
+  left: calc(100% / 14);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  transform: translate(-50%, -50%);
+  border: 2px solid #253343;
+  border-radius: 50%;
+  background: #fff;
+  color: #111820;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.edp-carbon > a {
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .edp-carbon a,
@@ -187,6 +362,34 @@
 }
 
 @media (max-width: 620px) {
+  .edp-utility-inner {
+    width: calc(100% - 28px);
+    min-height: 48px;
+    gap: 0.75rem;
+  }
+
+  .edp-utility-controls {
+    gap: 1rem;
+  }
+
+  .edp-global-link,
+  .edp-utility-menu summary {
+    gap: 0.35rem;
+    font-size: 0.78rem;
+  }
+
+  .edp-global-link svg,
+  .edp-utility-menu summary svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .edp-utility-menu summary i {
+    width: 8px;
+    height: 8px;
+    margin-left: 0.1rem;
+  }
+
   .edp-footer-main {
     padding-top: 1.5rem;
   }
@@ -202,7 +405,10 @@
   }
 
   .edp-carbon {
-    text-align: left;
+    position: static;
+    width: min(432px, 100%);
+    margin-top: 0.5rem;
+    text-align: center;
   }
 
   .edp-footer-links {
