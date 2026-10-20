@@ -60,6 +60,37 @@
         font-size: 0.9rem;
       }
 
+      .catalog-tabs {
+        display: flex;
+        gap: 0.5rem;
+        border-bottom: 1px solid #cbd7d5;
+      }
+
+      .catalog-tab {
+        padding: 0.85rem 1.25rem;
+        border: 1px solid #cbd7d5;
+        border-bottom: 0;
+        background: #e8efed;
+        color: var(--marine);
+        font: inherit;
+        font-weight: 800;
+        cursor: pointer;
+      }
+
+      .catalog-tab[aria-selected="true"] {
+        background: var(--marine);
+        color: var(--white);
+      }
+
+      .catalog-tab:focus-visible {
+        outline: 3px solid var(--seaweed);
+        outline-offset: 3px;
+      }
+
+      .catalog-panel[hidden] {
+        display: none;
+      }
+
       .catalog-grid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -143,23 +174,6 @@
         color: #424d5b;
       }
 
-      .pipeline-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.65rem;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-      }
-
-      .pipeline-list li {
-        padding: 0.6rem 0.8rem;
-        border: 1px solid #d5e0de;
-        background: var(--white);
-        color: var(--marine);
-        font-weight: 700;
-      }
-
       @media (max-width: 760px) {
         .catalog-filters,
         .catalog-grid {
@@ -206,7 +220,7 @@
           <p class="breadcrumb"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Catálogo de projetos</span></p>
           <p class="eyebrow">Portfólio PDI · Geração e Transmissão</p>
           <h1>Projetos que transformam desafios em inovação</h1>
-          <p class="hero-copy">Conheça objetivos, soluções, entregas e frentes de pesquisa identificadas nas apresentações do portfólio de P&amp;D.</p>
+          <p class="hero-copy">Conheça objetivos, soluções e entregas das iniciativas de P&amp;D; consulte também os prêmios recebidos pelo Hub.</p>
         </div>
       </section>
 
@@ -214,13 +228,23 @@
         <div class="wrap">
           <div class="section-heading">
             <p class="section-label">Visão do portfólio</p>
-            <h2 id="catalog-intro">Um panorama de iniciativas concluídas, em execução e em prospecção</h2>
-            <p>Os materiais apresentam projetos de eficiência operacional, novos negócios, inovação regulatória, transição energética e resiliência de ativos, abrangendo iniciativas concluídas, em execução, em formalização e em prospecção.</p>
+            <h2 id="catalog-intro">Um panorama de iniciativas concluídas e em execução</h2>
+            <p>Os materiais apresentam projetos de eficiência operacional, inovação regulatória, transição energética e resiliência de ativos, incluindo iniciativas concluídas e em execução.</p>
           </div>
-          <p class="catalog-note"><strong>Como ler os dados:</strong> os estados, valores e cronogramas abaixo reproduzem fotografias do portfólio nas apresentações de dezembro de 2025 e agosto de 2026. Datas previstas e saldos não são atualização em tempo real e podem ter mudado. Quando a apresentação não associa com clareza um estado a um projeto, não atribuímos um estado individual.</p>
+          <p class="catalog-note"><strong>Como ler os dados:</strong> os estados, valores e cronogramas abaixo reproduzem registros das apresentações consultadas. Datas previstas e saldos não são atualização em tempo real e podem ter mudado. Quando a apresentação não associa com clareza um estado a um projeto, não atribuímos um estado individual.</p>
         </div>
       </section>
 
+      <section class="content-section alt" aria-label="Abas do catálogo">
+        <div class="wrap">
+          <div class="catalog-tabs" role="tablist" aria-label="Conteúdo do catálogo">
+            <button class="catalog-tab" id="projects-tab" type="button" role="tab" aria-selected="true" aria-controls="projects-panel" tabindex="0">Projetos</button>
+            <button class="catalog-tab" id="awards-tab" type="button" role="tab" aria-selected="false" aria-controls="awards-panel" tabindex="-1">Prêmios</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="catalog-panel" id="projects-panel" role="tabpanel" aria-labelledby="projects-tab" tabindex="0">
       <section class="content-section alt" aria-label="Filtros do catálogo">
         <div class="wrap">
           <div class="catalog-filters">
@@ -230,7 +254,6 @@
                 <option value="geracao">Geração</option>
                 <option value="transmissao">Transmissão</option>
                 <option value="regulatorio">Mercado e regulação</option>
-                <option value="proposta">Prospecção e novos projetos</option>
               </select>
             </label>
             <label for="catalog-search">Buscar projeto ou tema
@@ -262,7 +285,6 @@
                 <p><strong>Marcos do cronograma:</strong> início em 2021; construção da UFV e comissionamento da eletrólise; primeira molécula em novembro de 2022; testes do dispositivo de mistura Diesel/H₂ em 2023–2025; operação assistida, treinamento de O&amp;M, certificação e auditoria entre 2025 e 2026.</p>
                 <p><strong>Fatores críticos:</strong> concluir a operação assistida, treinar equipes, implementar medição e certificação de origem e concluir a plataforma de mercado.</p>
                 <p><strong>Instituições citadas:</strong> proponente Porto do Pecém Geração de Energia S.A.; cooperadas Enerpeixe S.A. e Lajeado Energia S.A.; executoras GESEL e IATI. Coordenação indicada: Nivalde de Castro (GESEL) e Luciano Tavares (IATI). Gerência/responsável indicada: Nadson Tomé (P&amp;D GT).</p>
-                <p><strong>Destaques:</strong> o portfólio de agosto de 2026 registra o projeto como encerrado; a apresentação também menciona reconhecimentos H2LAC 2023 e Prêmio EDP 2023.</p>
               </details>
             </article>
 
@@ -281,7 +303,7 @@
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="sworker evolution apr digital bodycams big data inteligencia artificial seguranca sefield">
-              <p class="article-type">Transversal · Segurança e O&amp;M · Portfólio dez/2025</p>
+              <p class="article-type">Transversal · Segurança e O&amp;M</p>
               <h3>SWorker Evolution — APR Digital</h3>
               <p>Evolução de uma plataforma digital de análise preliminar de riscos para apoiar a segurança e o desempenho das atividades em campo, com tratamento de dados e indicadores.</p>
               <p class="article-meta">Início indicado: 15/10/2024 · Término previsto: 15/04/2026.</p>
@@ -309,7 +331,7 @@
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="banco precos vida util referencia regulatoria metodologia investimentos">
-              <p class="article-type">Transmissão · Planejamento da expansão · Portfólio dez/2025</p>
+              <p class="article-type">Transmissão · Planejamento da expansão</p>
               <h3>Banco de Preços e Vida Útil</h3>
               <p>Revisão da metodologia e das ferramentas do Banco de Preços de Referência para apoiar atualizações mais ágeis e assertivas e melhorar a estimativa de investimentos.</p>
               <p class="article-meta">Início indicado: 19/12/2024 · Término previsto: 31/08/2026.</p>
@@ -351,123 +373,29 @@
         </div>
       </section>
 
-      <section class="content-section alt" aria-labelledby="pipeline-title">
+      </div>
+
+      <section class="content-section alt catalog-panel" id="awards-panel" role="tabpanel" aria-labelledby="awards-tab" tabindex="0" hidden>
         <div class="wrap">
           <div class="section-heading">
-            <p class="section-label">Novas frentes</p>
-            <h2 id="pipeline-title">Prospecção e projetos em formalização</h2>
-            <p>A apresentação de agosto de 2026 reúne os projetos abaixo como novas propostas em formalização e/ou prospecção. O material não permite associar com segurança um estado individual a cada proposta.</p>
+            <p class="section-label">Reconhecimentos</p>
+            <h2 id="awards-title">Prêmios</h2>
+            <p>Prêmios recebidos pela iniciativa de Hidrogênio Verde.</p>
           </div>
-          <div class="catalog-grid">
-            <article class="article-card catalog-card" data-project data-category="proposta" data-search="rcm evolution manutencao prescritiva inteligencia artificial renovaveis">
-              <p class="article-type">Eficiência do negócio · Proposta</p>
-              <h3>RCM Evolution</h3>
-              <p>Elevar a maturidade de análise de dados para manutenção prescritiva e validar a abrangência tecnológica com uma prova de conceito em Renováveis.</p>
-              <details>
-                <summary>Entregas e abordagem</summary>
-                <ul>
-                  <li>PoC para testar a relevância da solução e mapear lacunas.</li>
-                  <li>Elevação de TRL e valorização de tecnologias estratégicas.</li>
-                  <li>Arquitetura de software escalável, com potencial de expansão e comercialização.</li>
-                </ul>
-              </details>
-            </article>
-
-            <article class="article-card catalog-card" data-project data-category="proposta" data-search="hydro generator digital twin replica digital gerador sincronas esforcos magneticos">
-              <p class="article-type">Eficiência do negócio · Proposta</p>
-              <h3>Hydro Generator Digital Twin</h3>
-              <p>Desenvolver uma capacidade de análise física dos esforços magnéticos que afetam máquinas síncronas, com aplicação potencial em diferentes indústrias que utilizam geradores síncronos.</p>
-              <details>
-                <summary>Entregas previstas</summary>
-                <ul>
-                  <li>Réplica digital de máquinas síncronas.</li>
-                  <li>Modelo matemático eletromagnético avançado.</li>
-                  <li>Software de simulação, patente, registro de software e publicações científicas.</li>
-                </ul>
-              </details>
-            </article>
-
-            <article class="article-card catalog-card" data-project data-category="proposta" data-search="bitcoin mining mineracao bitcoin curtailment energia excedente axia">
-              <p class="article-type">Eficiência do negócio · Originalidade em estudo</p>
-              <h3>Bitcoin Mining</h3>
-              <p>Estudar um sistema de mineração de Bitcoin como alternativa para mitigar perdas financeiras associadas ao curtailment, utilizando energia que seria restringida.</p>
-              <p class="article-meta">O material registra conversas com a AXIA para explorar possíveis parcerias tecnológicas e informa que a originalidade ainda estava em estudo.</p>
-              <details>
-                <summary>Entrega prevista</summary>
-                <p>Planta de mineração de Bitcoin que utilize energia de curtailment. Trata-se de uma proposta em avaliação no material, não de solução confirmada ou implantada.</p>
-              </details>
-            </article>
-
-            <article class="article-card catalog-card" data-project data-category="proposta transmissao" data-search="resiliencia ativos iot transmissao clima monitoramento inteligencia artificial">
-              <p class="article-type">Transmissão · Eficiência e resiliência · Proposta</p>
-              <h3>Resiliência de Ativos — IoT na Transmissão</h3>
-              <p>Solução integrada para monitoramento climático e gestão resiliente de ativos de transmissão, com o objetivo de reduzir desligamentos forçados e penalidades por Parcela Variável.</p>
-              <details>
-                <summary>Entregas previstas</summary>
-                <ul>
-                  <li>Protótipo de monitoramento em TRL 6–7.</li>
-                  <li>Dispositivo IoT multissensorial.</li>
-                  <li>Plataforma analítica com inteligência artificial.</li>
-                  <li>Piloto de campo com validação operacional, patente, registro de software e publicações.</li>
-                </ul>
-              </details>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-section" aria-labelledby="portfolio-list-title">
-        <div class="wrap">
-          <div class="section-heading">
-            <p class="section-label">Outras iniciativas mencionadas</p>
-            <h2 id="portfolio-list-title">Projetos e temas no pipeline</h2>
-            <p>Os nomes abaixo aparecem nos mapas de portfólio, sem ficha descritiva suficiente nas apresentações para detalhar objetivo, prazo e entregas sem inferências.</p>
-          </div>
-          <ul class="pipeline-list">
-            <li>IoT LoRaWAN</li>
-            <li>Mobilidade I</li>
-            <li>Mobilidade II</li>
-            <li>Usinas Reversíveis</li>
-            <li>VA/VR</li>
-            <li>Rotas 2.0</li>
-            <li>Sensor do Entreferro</li>
-            <li>E-lounge</li>
-            <li>Rede de Carregamento</li>
-            <li>Plataforma SWorker</li>
-            <li>Sensores Vestíveis e APR Digital</li>
-            <li>Capacidade de Mercado</li>
+          <ul class="recognition-grid">
+            <li class="recognition-card">
+              <span class="recognition-year">2023</span>
+              <h3>H2LAC</h3>
+              <p class="recognition-description">Prêmio Melhor Projeto Pioneiro de Produção de Hidrogênio</p>
+              <img class="recognition-image" src="assets/premio-h2lac-2023.jpg" alt="Equipe recebe o prêmio H2LAC 2023 de Melhor Projeto Pioneiro de Produção de Hidrogênio.">
+            </li>
+            <li class="recognition-card">
+              <span class="recognition-year">2023</span>
+              <h3>Prêmio EDP</h3>
+              <p class="recognition-description">1º Lugar em Inovação no Negócio</p>
+              <img class="recognition-image" src="assets/premio-edp-2023-equipe.png" alt="Equipe reunida para celebrar o Prêmio EDP 2023.">
+            </li>
           </ul>
-          <p class="catalog-note" style="margin-top: 1.25rem"><strong>Projetos marcados como encerrados na visão de agosto de 2026:</strong> Capacidade de Mercado, Hidrogênio Verde, Barco Elétrico, Desenho de Mercado, E-lounge, Rede de Carregamento e UHE Reversíveis. RCM Transmissão aparece em execução; o conjunto de novos projetos está em formalização e/ou prospecção.</p>
-          <p class="catalog-note" style="margin-top: 1.25rem"><strong>Estados do pipeline:</strong> o mapa de dezembro de 2025 utiliza as categorias “a ser formalizado”, “auditoria”, “em andamento”, “fechado” e “prospecção”. Como o layout extraído não associa de forma inequívoca cada rótulo a todos os projetos, estes estados não foram atribuídos individualmente.</p>
-        </div>
-      </section>
-
-      <section class="content-section alt" aria-labelledby="regulatory-title">
-        <div class="wrap">
-          <div class="section-heading">
-            <p class="section-label">Retrato regulatório histórico</p>
-            <h2 id="regulatory-title">Indicadores percentuais registrados em dezembro de 2025</h2>
-            <p>Os percentuais abaixo são referências históricas do painel de portfólio, não indicadores atualizados em tempo real.</p>
-          </div>
-          <div class="catalog-table-wrap">
-            <table class="catalog-table">
-              <thead>
-                <tr><th>Empresa / unidade</th><th>Indicador (% LR)</th><th>Referência</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>Enerpeixe</td><td>-51%</td><td>Dez/2025</td></tr>
-                <tr><td>Lajeado</td><td>8%</td><td>Dez/2025</td></tr>
-                <tr><td>São Manoel</td><td>105%</td><td>Dez/2025</td></tr>
-                <tr><td>Cachoeira Caldeirão</td><td>87%</td><td>Dez/2025</td></tr>
-                <tr><td>CEJA – Jari</td><td>18%</td><td>Dez/2025</td></tr>
-                <tr><td>EDP Goiás (CELG)</td><td>65%</td><td>Dez/2025</td></tr>
-                <tr><td>Litoral Sul</td><td>26%</td><td>Dez/2025</td></tr>
-                <tr><td>EDP Norte (TMN1)</td><td>N/A*</td><td>Dez/2025</td></tr>
-                <tr><td>EDP Norte 2 (TMN2)</td><td>N/A*</td><td>Dez/2025</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="catalog-note" style="margin-top: 1.25rem"><strong>Faixas de limite regulatório mostradas no material:</strong> adiantado abaixo de 0%; satisfatório de 0% a 80%; atenção acima de 80% até 100%; crítico acima de 100% até 140%; supercrítico acima de 140%. A apresentação também indica N/A para unidades com menos de 24 meses desde o início da operação. A situação efetiva deve ser confirmada em fonte atualizada.</p>
         </div>
       </section>
 
@@ -476,7 +404,7 @@
           <div class="section-heading">
             <p class="section-label">Fontes e atualização</p>
             <h2 id="sources-title">Sobre este catálogo</h2>
-            <p>Conteúdo organizado a partir de “Portfólio P&amp;D-GT Engenharia” (dezembro de 2025) e “PDI Comitê de Inovação” (agosto de 2026). Foram preservadas as datas e qualificações como aparecem nos materiais; diferenças entre apresentações podem refletir a evolução do portfólio. As propostas são descritas como propostas e não como projetos implantados.</p>
+            <p>Conteúdo organizado a partir dos materiais de portfólio e do Comitê de Inovação. Foram preservadas as qualificações disponíveis; diferenças entre apresentações podem refletir a evolução do portfólio. As propostas são descritas como propostas e não como projetos implantados.</p>
           </div>
           <div class="page-actions">
             <a class="button" href="index.html#inicio">Voltar ao início</a>
@@ -492,6 +420,34 @@
       </div>
     </footer>
     <script>
+      const catalogTabs = [...document.querySelectorAll('[role="tab"]')];
+
+      function activateCatalogTab(selectedTab, moveFocus = false) {
+        for (const tab of catalogTabs) {
+          const selected = tab === selectedTab;
+          tab.setAttribute("aria-selected", String(selected));
+          tab.tabIndex = selected ? 0 : -1;
+          document.getElementById(tab.getAttribute("aria-controls")).hidden = !selected;
+        }
+
+        if (moveFocus) selectedTab.focus();
+      }
+
+      catalogTabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => activateCatalogTab(tab));
+        tab.addEventListener("keydown", (event) => {
+          let nextIndex = index;
+          if (event.key === "ArrowRight") nextIndex = (index + 1) % catalogTabs.length;
+          else if (event.key === "ArrowLeft") nextIndex = (index - 1 + catalogTabs.length) % catalogTabs.length;
+          else if (event.key === "Home") nextIndex = 0;
+          else if (event.key === "End") nextIndex = catalogTabs.length - 1;
+          else return;
+
+          event.preventDefault();
+          activateCatalogTab(catalogTabs[nextIndex], true);
+        });
+      });
+
       const categoryFilter = document.querySelector("#catalog-category");
       const searchInput = document.querySelector("#catalog-search");
       const resetButton = document.querySelector("#catalog-reset");
