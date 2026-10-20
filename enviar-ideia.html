@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#212e3e">
+    <meta name="description" content="Envie uma proposta de Pesquisa, Desenvolvimento e Inovação para o Hub PDI GT.">
+    <title>Enviar Ideia | Hub de Inovação PDI GT</title>
+    <link rel="stylesheet" href="inner-pages.css">
+  </head>
+  <body>
+    <div class="topline">
+      <div class="wrap">
+        <span>Pesquisa, desenvolvimento e inovação</span>
+        <span>Hub PDI GT</span>
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="index.html#inicio" aria-label="Hub de Inovação PDI GT, início">
+          <img class="brand-mark" src="assets/edp-logo.png" alt="EDP">
+          <span class="brand-name">
+            <span>Hub de Inovação</span>
+            <span>Pesquisa · Desenvolvimento · Inovação</span>
+          </span>
+        </a>
+        <nav aria-label="Navegação principal">
+          <a href="index.html#inicio">Início</a>
+          <details class="nav-dropdown">
+            <summary>Áreas de Atuação</summary>
+            <div class="nav-submenu">
+              <a href="index.html#geracao">Geração</a>
+              <a href="index.html#transmissao">Transmissão</a>
+            </div>
+          </details>
+          <a href="catalogo-projetos.html">Projetos</a>
+          <a href="artigos.html">Artigos</a>
+          <a href="enviar-ideia.html" aria-current="page">Enviar Ideia</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="breadcrumb"><a href="index.html">Início</a><span aria-hidden="true">›</span><span>Enviar Ideia</span></p>
+          <p class="eyebrow">Sua contribuição</p>
+          <h1>Portal de Submissão de Propostas de Pesquisa, Desenvolvimento e Inovação (P&amp;D&amp;I)</h1>
+          <p class="hero-copy">Apresente sua proposta para avaliação técnica pela equipe de P&amp;D&amp;I do Hub.</p>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="idea-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <h2 id="idea-title">Envie sua proposta</h2>
+            <p>Preencha as etapas abaixo. Os campos obrigatórios estão marcados e você pode anexar um arquivo PDF de até 10 MB.</p>
+            <p class="form-progress" id="form-progress" aria-live="polite">Etapa 1 de 4 — Sobre você</p>
+          </div>
+            <form class="idea-form" id="proposal-form" action="https://usebasin.com/f/ba9c3ec2227f" method="post" enctype="multipart/form-data" accept-charset="UTF-8" data-basin-form data-basin-success-action="render" data-basin-success-id="proposal-success" data-basin-error-id="proposal-error">
+              <div class="form-step" data-form-step="1">
+              <fieldset>
+                <legend>Sobre você</legend>
+                <p>Identificação de quem está submetendo a ideia.</p>
+                <div class="form-field">
+                  <label for="proposal-name">Nome completo <span aria-hidden="true">*</span></label>
+                  <input id="proposal-name" name="nome_completo" type="text" autocomplete="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="proposal-organization">Empresa / Instituição <span aria-hidden="true">*</span></label>
+                  <input id="proposal-organization" name="empresa_instituicao" type="text" autocomplete="organization" required>
+                </div>
+                <div class="form-field">
+                  <label for="proposal-email">E-mail <span aria-hidden="true">*</span></label>
+                  <input id="proposal-email" name="email" type="email" autocomplete="email" required>
+                </div>
+                <div class="form-field">
+                  <label for="proposal-phone">Telefone <span aria-hidden="true">*</span></label>
+                  <input id="proposal-phone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 91234-5678" pattern="\(\d{2}\) \d{4,5}-\d{4}" title="Use o formato (XX) XXXXX-XXXX ou (XX) XXXX-XXXX" required>
+                  <span class="form-help">Use o formato (XX) XXXXX-XXXX.</span>
+                </div>
+              </fieldset>
+                <div class="form-step-nav">
+                  <span></span>
+                  <button class="button" type="button" data-step-next>Avançar</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-form-step="2">
+              <fieldset>
+                <legend>Caracterização da proposta</legend>
+                <p>Descreva rapidamente a proposta.</p>
+                <div class="form-field">
+                  <label for="proposal-title">Título da ideia <span aria-hidden="true">*</span></label>
+                  <span class="form-help" id="proposal-title-help">Qual o nome da sua proposta?</span>
+                  <input id="proposal-title" name="titulo_ideia" type="text" aria-describedby="proposal-title-help" required>
+                </div>
+                <div class="form-field">
+                  <label for="proposal-problem">Qual problema sua ideia busca resolver? <span aria-hidden="true">*</span></label>
+                  <textarea id="proposal-problem" name="problema" required></textarea>
+                </div>
+                <div class="form-field">
+                  <label for="proposal-summary">Descreva sua ideia <span aria-hidden="true">*</span></label>
+                  <span class="form-help" id="proposal-summary-help">Resumo executivo, com até 500 palavras.</span>
+                  <textarea id="proposal-summary" name="resumo_executivo" aria-describedby="proposal-summary-help proposal-word-count" required></textarea>
+                  <span class="word-count" id="proposal-word-count" aria-live="polite">0 de 500 palavras</span>
+                </div>
+                <fieldset class="choice-list">
+                  <legend>Qual o nível de maturidade da solução? <span aria-hidden="true">*</span></legend>
+                  <label class="choice-option"><input type="radio" name="maturidade" value="Apenas uma ideia" required> Apenas uma ideia</label>
+                  <label class="choice-option"><input type="radio" name="maturidade" value="Conceito"> Conceito</label>
+                  <label class="choice-option"><input type="radio" name="maturidade" value="Protótipo"> Protótipo</label>
+                  <label class="choice-option"><input type="radio" name="maturidade" value="Piloto"> Piloto</label>
+                </fieldset>
+                <fieldset class="choice-list">
+                  <legend>Há alguma patente relacionada? <span aria-hidden="true">*</span></legend>
+                  <label class="choice-option"><input type="radio" name="patente" value="Sim" required> Sim</label>
+                  <label class="choice-option"><input type="radio" name="patente" value="Não"> Não</label>
+                </fieldset>
+              </fieldset>
+                <div class="form-step-nav">
+                  <button class="button button-secondary" type="button" data-step-previous>Voltar</button>
+                  <button class="button" type="button" data-step-next>Avançar</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-form-step="3">
+              <fieldset>
+                <legend>Aplicação no setor elétrico</legend>
+                <p>Identifique a aderência ao negócio.</p>
+                <fieldset class="choice-list">
+                  <legend>Em qual área sua proposta se aplica? <span aria-hidden="true">*</span></legend>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Geração Hidrelétrica" required> Geração Hidrelétrica</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Transmissão"> Transmissão</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Subestações"> Subestações</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Linhas de Transmissão"> Linhas de Transmissão</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Operação"> Operação</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Manutenção"> Manutenção</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Meio Ambiente"> Meio Ambiente</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Segurança"> Segurança</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Mercado de Energia"> Mercado de Energia</label>
+                  <label class="choice-option"><input type="radio" name="area_aplicacao" value="Outra"> Outra</label>
+                  <div class="form-field form-other">
+                    <label for="proposal-area-other">Se escolheu “Outra”, especifique (opcional)</label>
+                    <input id="proposal-area-other" name="area_outra" type="text">
+                  </div>
+                </fieldset>
+                <fieldset class="choice-list">
+                  <legend>Qual desafio ela atende? <span aria-hidden="true">*</span></legend>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Redução de custos" required> Redução de custos</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Digitalização"> Digitalização</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Automação"> Automação</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Segurança Operacional"> Segurança Operacional</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Sustentabilidade"> Sustentabilidade</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Confiabilidade dos Ativos"> Confiabilidade dos Ativos</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Produtividade"> Produtividade</label>
+                  <label class="choice-option"><input type="radio" name="desafio_atendido" value="Outra"> Outra</label>
+                  <div class="form-field form-other">
+                    <label for="proposal-challenge-other">Se escolheu “Outra”, especifique (opcional)</label>
+                    <input id="proposal-challenge-other" name="desafio_outro" type="text">
+                  </div>
+                </fieldset>
+                <fieldset class="choice-list">
+                  <legend>O benefício pode ser aplicado em outras empresas do setor? <span aria-hidden="true">*</span></legend>
+                  <label class="choice-option"><input type="radio" name="aplicavel_outras_empresas" value="Sim" required> Sim</label>
+                  <label class="choice-option"><input type="radio" name="aplicavel_outras_empresas" value="Não"> Não</label>
+                  <label class="choice-option"><input type="radio" name="aplicavel_outras_empresas" value="Parcialmente"> Parcialmente</label>
+                </fieldset>
+                <div class="form-field">
+                  <label for="proposal-attachment">Anexo (opcional)</label>
+                  <input id="proposal-attachment" name="anexo_pdf" type="file" accept=".pdf,application/pdf" aria-describedby="proposal-attachment-help">
+                  <span class="form-help" id="proposal-attachment-help">Envie somente um arquivo PDF de até 10 MB.</span>
+                </div>
+              </fieldset>
+                <div class="form-step-nav">
+                  <button class="button button-secondary" type="button" data-step-previous>Voltar</button>
+                  <button class="button" type="button" data-step-next>Avançar</button>
+                </div>
+              </div>
+
+              <div class="form-step" data-form-step="4">
+              <fieldset>
+                <legend>Termo de consentimento</legend>
+                <p>LGPD — Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018).</p>
+                <label class="consent-option">
+                  <input type="checkbox" name="consentimento_lgpd" value="Aceito" required>
+                  <span>Declaro que as informações fornecidas são verdadeiras e autorizo seu uso para fins de avaliação técnica da proposta pela equipe de P&amp;D&amp;I. Estou ciente de que o preenchimento deste formulário não implica aprovação ou contratação da proposta apresentada.</span>
+                </label>
+              </fieldset>
+
+              <div class="form-actions">
+                <button class="button button-secondary" type="button" data-step-previous>Voltar</button>
+                <button class="button" type="submit">Enviar proposta</button>
+                <span class="form-status" id="proposal-form-status" role="status" aria-live="polite"></span>
+              </div>
+              </div>
+            </form>
+            <div class="submission-message submission-success" id="proposal-success" role="status" style="display: none;">
+              <strong>Proposta enviada com sucesso.</strong>
+              <span>Obrigado por compartilhar sua ideia com o Hub de P&amp;D&amp;I.</span>
+            </div>
+            <div class="submission-message submission-error" id="proposal-error" role="alert" style="display: none;">
+              <strong>Não foi possível enviar sua proposta.</strong>
+              <span>Confira sua conexão e tente novamente. Se o problema continuar, entre em contato com a equipe do Hub.</span>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const proposalForm = document.querySelector("#proposal-form");
+      const summaryField = document.querySelector("#proposal-summary");
+      const summaryCount = document.querySelector("#proposal-word-count");
+      const attachmentField = document.querySelector("#proposal-attachment");
+      const formSteps = [...proposalForm.querySelectorAll("[data-form-step]")];
+      const formProgress = document.querySelector("#form-progress");
+      const stepLabels = ["Sobre você", "Caracterização da proposta", "Aplicação no setor elétrico", "Termo de consentimento"];
+      const maxAttachmentBytes = 10 * 1024 * 1024;
+      let activeStepIndex = 0;
+
+      function showFormStep(index, scrollToStep = true) {
+        activeStepIndex = index;
+        formSteps.forEach((step, stepIndex) => {
+          step.hidden = stepIndex !== activeStepIndex;
+        });
+        formProgress.textContent = `Etapa ${index + 1} de ${formSteps.length} — ${stepLabels[index]}`;
+        if (scrollToStep) {
+          formSteps[index].setAttribute("tabindex", "-1");
+          formSteps[index].focus();
+          formSteps[index].scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+
+      proposalForm.addEventListener("click", (event) => {
+        if (event.target.closest("[data-step-next]")) {
+          const activeStep = formSteps[activeStepIndex];
+          if (activeStepIndex === 1) updateSummaryWordCount();
+          const firstInvalid = [...activeStep.querySelectorAll("input, textarea, select")].find((field) => !field.checkValidity());
+          if (firstInvalid) {
+            firstInvalid.reportValidity();
+            return;
+          }
+          showFormStep(Math.min(activeStepIndex + 1, formSteps.length - 1));
+        }
+
+        if (event.target.closest("[data-step-previous]")) {
+          showFormStep(Math.max(activeStepIndex - 1, 0));
+        }
+      });
+
+      function updateSummaryWordCount() {
+        const words = summaryField.value.trim().split(/\s+/).filter(Boolean);
+        const wordCount = summaryField.value.trim() ? words.length : 0;
+        summaryCount.textContent = `${wordCount} de 500 palavras`;
+        summaryField.setCustomValidity(wordCount > 500 ? "O resumo executivo deve ter no máximo 500 palavras." : "");
+      }
+
+      function validateAttachment() {
+        const file = attachmentField.files[0];
+        attachmentField.setCustomValidity("");
+
+        if (!file) return;
+
+        const isPdf = file.name.toLocaleLowerCase("pt-BR").endsWith(".pdf") && (!file.type || file.type === "application/pdf");
+        if (!isPdf) {
+          attachmentField.setCustomValidity("Anexe somente arquivos PDF.");
+        } else if (file.size > maxAttachmentBytes) {
+          attachmentField.setCustomValidity("O arquivo deve ter no máximo 10 MB.");
+        }
+      }
+
+      summaryField.addEventListener("input", updateSummaryWordCount);
+      attachmentField.addEventListener("change", validateAttachment);
+      proposalForm.addEventListener("submit", (event) => {
+        updateSummaryWordCount();
+        validateAttachment();
+
+        if (!proposalForm.reportValidity()) {
+          event.preventDefault();
+          return;
+        }
+
+        document.querySelector("#proposal-form-status").textContent = "Enviando sua proposta…";
+      });
+
+      document.addEventListener("basinjsFormSuccess", () => {
+        document.querySelector("#proposal-form-status").textContent = "";
+      });
+
+      document.addEventListener("basinjsFormError", () => {
+        document.querySelector("#proposal-form-status").textContent = "";
+      });
+
+      updateSummaryWordCount();
+      showFormStep(0, false);
+    </script>
+    <script src="https://js.usebasin.com/v2.11.1.min.js" defer></script>
+    <footer>
+      <div class="wrap footer-row">
+        <p>Hub_de_Inovacao_PDI_GT</p>
+      </div>
+    </footer>
+  </body>
+</html>
