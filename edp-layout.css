@@ -393,8 +393,34 @@ main .content-section .catalog-count {
   overflow-wrap: anywhere;
 }
 
+.article-grid .article-type {
+  color: var(--white);
+  font-family: inherit;
+  font-size: 0.86rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 1.4;
+}
+
 .catalog-card .article-type {
   color: var(--white);
+}
+
+.catalog-card > p:not(.article-type):not(.project-company-badge) {
+  flex: 1;
+}
+
+.catalog-card > p.project-company-badge {
+  align-self: flex-start;
+  max-width: 100%;
+  margin: 0.2rem 0 0.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0;
+  background: #5948d8;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
 .article-meta,
