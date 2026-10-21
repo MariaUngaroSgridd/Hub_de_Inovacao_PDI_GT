@@ -71,6 +71,18 @@ body.barco-project-page .page-hero::before {
     url("assets/2025_image25.jpeg") center bottom / cover no-repeat;
 }
 
+body.catalog-page .page-hero::before {
+  background:
+    linear-gradient(90deg, rgb(33 46 62 / 78%), rgb(33 46 62 / 64%)),
+    url("assets/redes-transmissao-brasil.jpg") center / cover no-repeat;
+}
+
+body.submit-idea-page .page-hero::before {
+  background:
+    linear-gradient(90deg, rgb(33 46 62 / 78%), rgb(33 46 62 / 64%)),
+    url("assets/ideia.jpg?v=20261021") right center / auto 100% no-repeat;
+}
+
 .hero-content,
 .page-hero .wrap {
   position: relative;
