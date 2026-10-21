@@ -393,6 +393,10 @@ main .content-section .catalog-count {
   overflow-wrap: anywhere;
 }
 
+.catalog-card .article-type {
+  color: var(--white);
+}
+
 .article-meta,
 .catalog-card .article-meta {
   color: #cbd7d9;
@@ -886,5 +890,83 @@ main .content-section .catalog-count {
   .mobile-navigation > summary {
     gap: 0.35rem;
     padding-inline: 0.55rem;
+  }
+}
+
+.project-partners {
+  max-width: 1023px;
+  margin: 2.25rem auto 0;
+}
+
+.project-partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.85rem;
+  margin-top: 0.9rem;
+}
+
+.project-partner-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 0.55rem 2rem;
+  margin: 0.9rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--marine, #212e3e);
+  line-height: 1.55;
+}
+
+.project-partner-list li::marker {
+  color: var(--green, #00f04b);
+}
+
+.partner-note {
+  margin-top: 1rem;
+  color: var(--marine, #212e3e);
+}
+
+.project-partner-logo {
+  min-width: 150px;
+  min-height: 88px;
+  display: flex;
+  flex: 0 1 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.85rem 1rem;
+  background: var(--white, #fff);
+  box-shadow: 0 8px 24px rgb(33 46 62 / 8%);
+  text-align: center;
+}
+
+.project-partner-logo img {
+  display: block;
+  width: auto;
+  max-width: 145px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.project-partner-logo span {
+  color: var(--marine, #212e3e);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.project-partners + .page-actions {
+  max-width: 1023px;
+  margin: 1.5rem auto 0;
+}
+
+@media (max-width: 640px) {
+  .project-partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-partner-logo {
+    min-width: 0;
+    flex-basis: auto;
   }
 }
