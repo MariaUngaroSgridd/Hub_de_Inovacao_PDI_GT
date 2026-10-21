@@ -94,6 +94,7 @@
                 <option value="todos">All projects</option>
                 <option value="hidrogenio-verde">Green Hydrogen</option>
                 <option value="barco-eletrico">Electric Boat</option>
+                <option value="baterias-ion-li">Li-Ion Batteries</option>
                 <option value="transmissao">Transmission</option>
               </select>
             </div>
@@ -222,6 +223,29 @@
           </div>
         </div>
       </section>
+
+      <section class="content-section" id="publicacoes-baterias" data-project-group="baterias-ion-li" aria-labelledby="baterias-articles-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-label">Energy Storage and Batteries Publications</p>
+            <h2 id="baterias-articles-title">Li-Ion Battery Storage Articles</h2>
+            <p>Articles and systematic reviews on lithium-ion battery energy storage systems integrated with solar PV for auxiliary services and Black Start in transmission substations.</p>
+          </div>
+          <div class="article-grid">
+            <article class="article-card" data-filterable data-project="baterias-ion-li" data-topic="energia" data-search-text="systematic literature review li-ion besss integrated photovoltaic systems power supply auxiliary services high-voltage power stations baterias ion-li sergio pires pimentel marcelo nogueira bousquet energies 2025">
+              <p class="article-type">Scientific Article · Systematic Review (Energies 2025)</p>
+              <h3>A Systematic Literature Review on Li-Ion BESSs Integrated with Photovoltaic Systems for Power Supply to Auxiliary Services in High-Voltage Power Stations</h3>
+              <p class="article-meta">Sérgio Pires Pimentel, Marcelo Nogueira Bousquet, Tiago Alves Barros Rosa, Leovir Cardoso Aleluia Junior, Enes Gonçalves Marra, José Wilson Lima Nerys, and Luciano Coutinho Gomes. <em>Energies</em> 2025, 18(13), 3544. DOI: 10.3390/en18133544.</p>
+              <p>A systematic literature review adhering to the PRISMA 2020 protocol. It assesses the technical feasibility, benefits, and challenges of integrating LiFePO4 battery energy storage systems with photovoltaic generation to ensure uninterruptible power supply for critical auxiliary services and Black Start in high-voltage substations.</p>
+              <a class="article-download" href="assets/energies-18-03544.pdf" target="_blank" rel="noopener noreferrer">Read full article (PDF)</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button" href="projeto-baterias-ion-li.html">Explore the Li-Ion Batteries Project</a>
+            <a class="button button-secondary" href="index.html">Back to Home</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="edp-footer">
@@ -331,7 +355,7 @@
         let visibleCount = 0;
 
         for (const item of filterableItems) {
-          const matchesProject = project === "todos" || item.dataset.project === project;
+          const matchesProject = project === "todos" || item.dataset.project === project || (project === "transmissao" && item.dataset.project === "baterias-ion-li");
           const matchesTopic = topic === "todos" || item.dataset.topic === topic;
           const matchesQuery = !query || normalizeText(item.dataset.searchText).includes(query);
           const visible = matchesProject && matchesTopic && matchesQuery;
@@ -340,7 +364,7 @@
         }
 
         for (const group of projectGroups) {
-          const matchesProject = project === "todos" || group.dataset.projectGroup === project;
+          const matchesProject = project === "todos" || group.dataset.projectGroup === project || (project === "transmissao" && group.dataset.projectGroup === "baterias-ion-li");
           const hasVisibleItems = group.querySelector("[data-filterable]:not([hidden])");
           group.hidden = !matchesProject || !hasVisibleItems;
         }

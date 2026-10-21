@@ -94,6 +94,7 @@
                 <option value="todos">Todos os projetos</option>
                 <option value="hidrogenio-verde">Hidrogênio Verde</option>
                 <option value="barco-eletrico">Barco Elétrico</option>
+                <option value="baterias-ion-li">Baterias Íon-Li</option>
                 <option value="transmissao">Transmissão</option>
               </select>
             </div>
@@ -222,6 +223,29 @@
           </div>
         </div>
       </section>
+
+      <section class="content-section" id="publicacoes-baterias" data-project-group="baterias-ion-li" aria-labelledby="baterias-articles-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-label">Publicações de Armazenamento e Baterias</p>
+            <h2 id="baterias-articles-title">Artigos do Projeto Baterias Íon-Li</h2>
+            <p>Artigos e revisões sobre sistemas de armazenamento em baterias de íons de lítio integrados à geração fotovoltaica para serviços auxiliares e resiliência de subestações de transmissão.</p>
+          </div>
+          <div class="article-grid">
+            <article class="article-card" data-filterable data-project="baterias-ion-li" data-topic="energia" data-search-text="systematic literature review li-ion besss integrated photovoltaic systems power supply auxiliary services high-voltage power stations baterias ion-li sergio pires pimentel marcelo nogueira bousquet energies 2025">
+              <p class="article-type">Artigo científico · Revisão Sistemática (Energies 2025)</p>
+              <h3>A Systematic Literature Review on Li-Ion BESSs Integrated with Photovoltaic Systems for Power Supply to Auxiliary Services in High-Voltage Power Stations</h3>
+              <p class="article-meta">Sérgio Pires Pimentel, Marcelo Nogueira Bousquet, Tiago Alves Barros Rosa, Leovir Cardoso Aleluia Junior, Enes Gonçalves Marra, José Wilson Lima Nerys e Luciano Coutinho Gomes. <em>Energies</em> 2025, 18(13), 3544. DOI: 10.3390/en18133544.</p>
+              <p>Revisão sistemática de literatura estruturada sob as diretrizes PRISMA 2020. Avalia a viabilidade técnica, benefícios e desafios da integração de bancos de baterias de íons de lítio (LiFePO4) com geração fotovoltaica para alimentação ininterrupta dos serviços auxiliares e partida a frio (Black Start) de subestações de transmissão.</p>
+              <a class="article-download" href="assets/energies-18-03544.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button" href="projeto-baterias-ion-li.pt.html">Conheça o projeto Baterias Íon-Li</a>
+            <a class="button button-secondary" href="index.pt.html">Voltar ao início</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="edp-footer">
@@ -331,7 +355,7 @@
         let visibleCount = 0;
 
         for (const item of filterableItems) {
-          const matchesProject = project === "todos" || item.dataset.project === project;
+          const matchesProject = project === "todos" || item.dataset.project === project || (project === "transmissao" && item.dataset.project === "baterias-ion-li");
           const matchesTopic = topic === "todos" || item.dataset.topic === topic;
           const matchesQuery = !query || normalizeText(item.dataset.searchText).includes(query);
           const visible = matchesProject && matchesTopic && matchesQuery;
@@ -340,7 +364,7 @@
         }
 
         for (const group of projectGroups) {
-          const matchesProject = project === "todos" || group.dataset.projectGroup === project;
+          const matchesProject = project === "todos" || group.dataset.projectGroup === project || (project === "transmissao" && group.dataset.projectGroup === "baterias-ion-li");
           const hasVisibleItems = group.querySelector("[data-filterable]:not([hidden])");
           group.hidden = !matchesProject || !hasVisibleItems;
         }
