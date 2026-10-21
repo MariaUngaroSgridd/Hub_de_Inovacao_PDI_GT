@@ -1,11 +1,16 @@
 /* Shared footer inspired by the EDP Brazil site */
 .edp-utility-bar {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 20;
   background: #9bb5b6;
   color: #25333d;
   font-family: inherit;
   font-size: 1rem;
+}
+
+.site-header {
+  top: 48px;
 }
 
 .edp-utility-inner {
@@ -362,6 +367,10 @@
 }
 
 @media (max-width: 620px) {
+  .site-header {
+    top: 48px;
+  }
+
   .edp-utility-inner {
     width: calc(100% - 28px);
     min-height: 48px;
@@ -436,6 +445,10 @@
 }
 
 @media (max-width: 360px) {
+  .site-header {
+    top: 72px;
+  }
+
   .edp-utility-inner {
     flex-wrap: wrap;
     justify-content: center;

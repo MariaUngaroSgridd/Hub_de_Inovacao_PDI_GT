@@ -58,11 +58,17 @@ body {
   content: "";
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgb(33 46 62 / 72%), rgb(33 46 62 / 38%)),
+    linear-gradient(90deg, rgb(33 46 62 / 82%), rgb(33 46 62 / 65%)),
     url("assets/hero-spiral.png") center / cover no-repeat;
   opacity: 1;
   -webkit-mask-image: none;
   mask-image: none;
+}
+
+body.barco-project-page .page-hero::before {
+  background:
+    linear-gradient(90deg, rgb(33 46 62 / 82%), rgb(33 46 62 / 65%)),
+    url("assets/2025_image25.jpeg") center bottom / cover no-repeat;
 }
 
 .hero-content,
@@ -97,6 +103,10 @@ body {
   color: var(--green);
   font-size: 0.75rem;
   letter-spacing: 0.1em;
+}
+
+.hero .eyebrow {
+  color: #fff;
 }
 
 .hero h1,
@@ -199,9 +209,52 @@ h2,
   background: var(--paper);
 }
 
+main .content-section > .wrap {
+  width: min(1023px, calc(100% - 48px));
+}
+
+main .content-section .section-heading {
+  max-width: 100%;
+}
+
+main .content-section .article-grid,
+main .content-section .catalog-grid,
+main .content-section .recognition-grid,
+main .content-section .photo-grid,
+main .content-section .filter-panel,
+main .content-section .catalog-filters,
+main .content-section .catalog-count {
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+}
+
 .section-heading {
   max-width: 1023px;
   margin: 0 auto 32px;
+}
+
+.fronts .wrap {
+  max-width: 1023px;
+}
+
+.fronts .section-heading {
+  text-align: left;
+}
+
+.fronts .card-grid {
+  width: 100%;
+  margin-inline: auto;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.fronts .card,
+.fronts .card-content {
+  min-height: 0;
+}
+
+.fronts .card-link {
+  margin-top: 1.25rem;
 }
 
 .section-heading h2,
@@ -382,6 +435,72 @@ h2,
   margin-inline: auto;
 }
 
+.project-copy {
+  max-width: 1023px;
+  margin-inline: auto;
+}
+
+.project-facts-grid {
+  max-width: 1023px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-inline: auto;
+}
+
+.project-fact {
+  padding: 24px;
+  border-left: 5px solid var(--green);
+  background: var(--white);
+  box-shadow: 0 8px 24px rgb(33 46 62 / 8%);
+}
+
+.project-fact:nth-child(2) {
+  border-left-color: var(--seaweed);
+  background: #dce5e7;
+}
+
+.project-fact h3 {
+  margin: 0 0 0.75rem;
+  color: var(--marine);
+  font-size: 1.25rem;
+}
+
+.project-fact p {
+  margin: 0;
+  color: #424d5b;
+  line-height: 1.7;
+}
+
+.project-fact-highlight {
+  border-left-color: var(--green);
+  background: var(--marine);
+}
+
+.project-fact-highlight h3,
+.project-fact-highlight p {
+  color: var(--white);
+}
+
+.project-fact-highlight h3 {
+  color: var(--green);
+}
+
+.project-copy + .page-actions {
+  max-width: 1023px;
+  margin: 1.5rem auto 0;
+}
+
+.project-facts-grid + .page-actions {
+  max-width: 1023px;
+  margin: 1.5rem auto 0;
+}
+
+.video-panel {
+  max-width: 1023px;
+  margin: 0 auto;
+}
+
 .project-copy p,
 .project-photo figcaption,
 .recognition-description {
@@ -389,16 +508,18 @@ h2,
 }
 
 .recognition-card {
-  min-height: 582px;
+  min-height: 0;
   justify-content: flex-start;
   padding: 0 0 24px;
   border-top: 0;
 }
 
 .recognition-image {
-  height: 220px;
+  width: 100%;
+  height: 305px;
   margin: 0 0 24px;
   object-fit: cover;
+  object-position: center;
   background: #dce5e7;
 }
 
@@ -419,8 +540,8 @@ h2,
 }
 
 .idea-section .wrap {
-  width: min(1232px, calc(100% - 64px));
-  padding: 48px;
+  width: min(1023px, calc(100% - 64px));
+  padding: 40px;
   background: var(--marine);
 }
 
@@ -460,6 +581,16 @@ h2,
 }
 
 @media (max-width: 768px) {
+  .project-facts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  main .content-section > .wrap {
+    width: calc(100% - 48px);
+  }
+
   .wrap {
     width: calc(100% - 64px);
   }
@@ -645,7 +776,7 @@ h2,
   }
 
   .recognition-image {
-    height: 196px;
+    height: 220px;
     margin-bottom: 16px;
   }
 
@@ -681,6 +812,11 @@ h2,
   .catalog-grid,
   .recognition-grid,
   .photo-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .fronts .card-grid {
     width: 100%;
     grid-template-columns: 1fr;
   }

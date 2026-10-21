@@ -91,7 +91,7 @@ a:focus-visible {
 }
 
 .brand-name span:last-child {
-  color: var(--seaweed);
+  color: #000;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.09em;

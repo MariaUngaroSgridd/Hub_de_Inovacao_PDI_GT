@@ -8,14 +8,42 @@
     <title>Catálogo de Projetos | Hub de Inovação PDI GT</title>
     <link rel="stylesheet" href="inner-pages.css">
     <style>
-      .catalog-filters {
+      main .content-section[aria-labelledby="catalog-intro"] {
+        padding-bottom: 24px;
+      }
+
+      main .content-section[aria-labelledby="catalog-intro"] .section-heading {
+        margin-bottom: 0;
+      }
+
+      main .content-section[aria-label="Filtros do catálogo"] {
+        padding-top: 24px;
+        padding-bottom: 24px;
+      }
+
+      main .content-section[aria-labelledby="featured-title"] {
+        padding-top: 24px;
+      }
+
+      .content-section .page-actions {
+        max-width: 1023px;
+        margin: 1.5rem auto 0;
+      }
+
+      .content-section .catalog-filters {
+        width: min(1023px, calc(100% - 64px));
         display: grid;
         grid-template-columns: minmax(220px, 1fr) minmax(260px, 2fr) auto;
         align-items: end;
-        gap: 1rem;
-        padding: 1.25rem;
+        gap: 0.65rem;
+        padding: 1rem;
         border: 1px solid #e0e8e8;
         background: var(--white);
+      }
+
+      .content-section .catalog-grid {
+        width: min(1023px, calc(100% - 64px));
+        margin-inline: auto;
       }
 
       .catalog-filters label {
@@ -54,8 +82,9 @@
       }
 
       .catalog-count {
+        width: min(1023px, calc(100% - 64px));
         min-height: 1.5em;
-        margin: 0.8rem 0 0;
+        margin: 0.4rem auto 0;
         color: #5a6673;
         font-size: 0.9rem;
       }
@@ -175,6 +204,14 @@
         .catalog-grid {
           grid-template-columns: 1fr;
         }
+
+        .catalog-count {
+          width: 100%;
+        }
+
+        .content-section .catalog-grid {
+          width: 100%;
+        }
       }
     </style>
       <link rel="stylesheet" href="footer.css">
@@ -188,7 +225,7 @@
     <div class="edp-utility-bar">
       <div class="edp-utility-inner">
         <a class="edp-global-link" href="https://edp.com/en" target="_blank" rel="noopener noreferrer">
-          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m10 14 4-4M8 16l-1.4 1.4a4 4 0 0 1-5.7-5.7l5-5a4 4 0 0 1 5.7 0M16 8l1.4-1.4a4 4 0 0 1 5.7 5.7l-5 5a4 4 0 0 1-5.7 0" /></svg>
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
           <span>EDP Global</span>
         </a>
         <div class="edp-utility-controls">
@@ -262,7 +299,6 @@
             <h2 id="catalog-intro">Um panorama de iniciativas concluídas e em execução</h2>
             <p>Os materiais apresentam projetos de eficiência operacional, inovação regulatória, transição energética e resiliência de ativos, incluindo iniciativas concluídas e em execução.</p>
           </div>
-          <p class="catalog-note"><strong>Como ler os dados:</strong> os estados, valores e cronogramas abaixo reproduzem registros das apresentações consultadas. Datas previstas e saldos não são atualização em tempo real e podem ter mudado. Quando a apresentação não associa com clareza um estado a um projeto, não atribuímos um estado individual.</p>
         </div>
       </section>
 
@@ -291,104 +327,56 @@
           <div class="section-heading">
             <p class="section-label">Projetos com ficha detalhada</p>
             <h2 id="featured-title">Iniciativas e projetos em destaque</h2>
-            <p>Abra “Detalhes do projeto” para consultar escopo, entregas, cronograma e instituições citadas no portfólio.</p>
+            <p>Consulte o resumo de cada iniciativa e acesse sua página para ver escopo, entregas e informações detalhadas.</p>
           </div>
           <div class="catalog-grid">
             <article class="article-card catalog-card" data-project data-category="geracao" data-search="hidrogenio verde pecem h2v eletrolise energia renovavel amonia modelo de negocio certificacao pecem">
               <p class="article-type">Geração · Transição energética · Encerrado no portfólio ago/2026</p>
               <h3>Hidrogênio Verde — Pecém H₂V</h3>
               <p>Projeto-piloto para estudar a cadeia do hidrogênio renovável, da geração de energia ao uso final, combinando planta de eletrólise, energia solar, aplicações térmicas e análise de mercado.</p>
-              <p class="article-meta">Início indicado: 29/06/2021 · Término previsto no plano: 29/06/2026 · Escala piloto: 1,25 MW e produção de 250 Nm³/h.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Objetivos:</strong> propor soluções para os elos a montante e a jusante da cadeia; elaborar cenários de escala de 1, 10, 100 e 1.000 MW; mapear demanda; estudar modelos de negócio sustentáveis sob aspectos técnicos, regulatórios, econômico-financeiros e ambientais; construir, operar e manter a planta e desenvolver parcerias.</p>
-                <p><strong>Entregas e realizações citadas:</strong> sistema de eletrólise de 1,25 MW; usina fotovoltaica de 3 MWp; queimador Diesel/H₂V para partida de caldeira; modelo de negócio com análise técnica e econômica; plataforma de estudo de mercado; roadmap de escalabilidade; estudos de certificação de origem e garantia de origem renovável; primeira molécula produzida e operação assistida.</p>
-                <p><strong>Marcos do cronograma:</strong> início em 2021; construção da UFV e comissionamento da eletrólise; primeira molécula em novembro de 2022; testes do dispositivo de mistura Diesel/H₂ em 2023–2025; operação assistida, treinamento de O&amp;M, certificação e auditoria entre 2025 e 2026.</p>
-                <p><strong>Fatores críticos:</strong> concluir a operação assistida, treinar equipes, implementar medição e certificação de origem e concluir a plataforma de mercado.</p>
-                <p><strong>Instituições citadas:</strong> proponente Porto do Pecém Geração de Energia S.A.; cooperadas Enerpeixe S.A. e Lajeado Energia S.A.; executoras GESEL e IATI. Coordenação indicada: Nivalde de Castro (GESEL) e Luciano Tavares (IATI). Gerência/responsável indicada: Nadson Tomé (P&amp;D GT).</p>
-              </details>
+              <a class="article-download" href="projeto-pecem-h2v.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="geracao" data-search="barco eletrico solar fotovoltaico bateria fibra otica monitoramento ambiental sao manoel">
               <p class="article-type">Geração · Mobilidade elétrica · Encerrado no portfólio ago/2026</p>
               <h3>Barco Elétrico</h3>
               <p>Desenvolvimento de embarcação multipropósito 100% elétrica, movida a energia solar, para transporte de funcionários e monitoramento ambiental.</p>
-              <p class="article-meta">Início indicado: 02/10/2020 · Término previsto: 02/10/2025 · Local de testes: reservatório da UHE São Manoel.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Entregas:</strong> barco elétrico com recarga fotovoltaica; posto de recarga abrigado no cais; documentação para regularização; procedimento de testes de barcos elétricos; monitoramento da integridade das baterias por fibra óptica.</p>
-                <p><strong>Atividades e marcos:</strong> projeto elétrico e náutico; dimensionamento do casco e automação; aquisição de baterias, motores e carregadores; montagem e transporte de Catanduva a São Manoel; integração e testes finais; vistoria e registro; testes de navegabilidade e instalação do sistema fotovoltaico. A apresentação lista relatório final e auditoria como etapas de encerramento.</p>
-                <p><strong>Instituições citadas:</strong> proponente UHE São Manoel; cooperada UHE Cachoeira Caldeirão; UFJF/FADEPE como executora/interveniente. Coordenação indicada: Alexandre Bessa (UFJF). Gerência/responsável indicada: Paulo Galveias (Engenharia).</p>
-                <p><strong>Registro técnico:</strong> o material descreve painel de instrumentos, sistema de GPS e sonar, rota registrada por GPS e abrigo de cais para recarga.</p>
-              </details>
+              <a class="article-download" href="projeto-barco-eletrico.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="sworker evolution apr digital bodycams big data inteligencia artificial seguranca sefield">
               <p class="article-type">Transversal · Segurança e O&amp;M</p>
               <h3>SWorker Evolution — APR Digital</h3>
               <p>Evolução de uma plataforma digital de análise preliminar de riscos para apoiar a segurança e o desempenho das atividades em campo, com tratamento de dados e indicadores.</p>
-              <p class="article-meta">Início indicado: 15/10/2024 · Término previsto: 15/04/2026.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Objetivos e entregas:</strong> ampliar o uso da APR nas empresas parceiras; plataforma multimídia e interativa com bodycams; portal web com dashboards; módulo Smart Inspector para análise de imagens e vídeos com IA; aplicação prevista para 100% da força de trabalho; treinamento e geração de indicadores de segurança e eficiência.</p>
-                <p><strong>Avanços e marcos citados:</strong> especificação e aquisição de celulares; validação do novo aplicativo e dos formulários; elaboração de AST e perguntas de riscos; cadastro e treinamento de equipes; acompanhamento da localização; integração com Databricks; certificação do SEField; alertas de risco, SOS em tempo real e avaliação automatizada de imagens/vídeos.</p>
-                <p><strong>Fator crítico:</strong> engajamento da área de Segurança para apoiar a implantação nas unidades de negócio.</p>
-                <p><strong>Instituições citadas:</strong> proponente EDP Distribuição SP; cooperadas EDP Distribuição ES, EDP Litoral Sul, Aliança Transmissora, UHE São Manoel e UHE Cachoeira; executora SGRIDD. Responsáveis/focais indicados: Fernando Cataldi, Renan Franco, Vilson da Silva e João Batista.</p>
-              </details>
+              <a class="article-download" href="projeto-sworker-evolution.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="rcm transmissao falhas diagnostico prognostico inteligencia artificial transformadores dga900 pi system orion">
               <p class="article-type">Transmissão · Engenharia e O&amp;M · Em execução no portfólio ago/2026</p>
               <h3>RCM Transmissão</h3>
               <p>Aplicação de métodos de detecção, diagnóstico e prognóstico de falhas em equipamentos críticos de subestações para reduzir falhas e paradas de manutenção.</p>
-              <p class="article-meta">Início indicado: 17/05/2023 · Término previsto no plano: 17/09/2026.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Entregas:</strong> integração do banco de dados de monitoração ao sistema supervisório; coleta automatizada de dados; módulos de detecção, diagnóstico e prognóstico; inteligência artificial para estimar vida útil residual; módulo de manutenção prescritiva.</p>
-                <p><strong>Avanços e marcos citados:</strong> integrações com Orion, PI System/OSIsoft e SAP; desenvolvimento e validação de algoritmos; análise de subestação com DGA900; implantação de módulos FDDP e treinamento. A apresentação define FDDP como detecção, diagnose e prognose de falhas.</p>
-                <p><strong>Fatores críticos:</strong> integração dos algoritmos aos sistemas, obra para instalação do DGA900 na subestação piloto de Xavantes, aditamento de prazo devido a atraso de importação e validação das interfaces.</p>
-                <p><strong>Instituições citadas:</strong> proponente EDP Transmissão Goiás S.A.; cooperadas EDP Litoral Sul, Transmissora SP-MG e Aliança Transmissora; executoras USP e CTS COMPASS. Coordenação indicada: Gilberto de Souza (USP). Gerência/responsável indicada: Hyghor Côrtes (Engenharia).</p>
-              </details>
+              <a class="article-download" href="projeto-rcm-transmissao.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="banco precos vida util referencia regulatoria metodologia investimentos">
               <p class="article-type">Transmissão · Planejamento da expansão</p>
               <h3>Banco de Preços e Vida Útil</h3>
               <p>Revisão da metodologia e das ferramentas do Banco de Preços de Referência para apoiar atualizações mais ágeis e assertivas e melhorar a estimativa de investimentos.</p>
-              <p class="article-meta">Início indicado: 19/12/2024 · Término previsto: 31/08/2026.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Entregas:</strong> relatórios técnicos sobre banco de preços e vida útil; reparametrização da metodologia; ferramentas de atualização; modelagem de vida útil regulatória e reposição; treinamento.</p>
-                <p><strong>Etapas e marcos:</strong> diagnóstico regulatório; análise de aderência histórica e tendências; métricas e governança; reparametrização; ferramentas de atualização; feedback, workshop e go-live; auditoria e relatório final.</p>
-                <p><strong>Fatores críticos:</strong> acompanhamento das atividades da ABRATE e A&amp;M; fornecimento de dados e análise das informações consolidadas.</p>
-                <p><strong>Instituições citadas:</strong> proponente ISA Energia Brasil S.A. (ISA CTEEP); cooperadas EDP Goiás, CPFL, Copel, Celeo, Quantum, Energisa, TAESA e outras; executoras IABRATE e A&amp;M. Coordenação indicada: Eduardo Mascarenhas (A&amp;M) e Claudio Elias Carvalho (IABRATE). Gerência/responsável indicada: Matheus Sorvillo (Planejamento da Expansão).</p>
-              </details>
+              <a class="article-download" href="projeto-banco-precos-vida-util.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="regulatorio" data-search="novos desenhos mercado setor eletrico liberalizacao inovacao regulatoria mercado energia gesel">
               <p class="article-type">Mercado e regulação · Concluído no portfólio ago/2026</p>
               <h3>Novos Desenhos de Mercado</h3>
               <p>Estudos e propostas de inovação regulatória para o setor elétrico no contexto de liberalização e de um novo desenho do mercado brasileiro de energia.</p>
-              <p class="article-meta">Início indicado: 01/02/2024 · Término previsto no plano: 01/02/2026.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Entregas:</strong> workshops; indicadores regulatórios; benchmarks entre Brasil e outros países e sobre agendas regulatórias; estudos de fluxos de investimento, financiamento e transição energética; proposições regulatórias e plano de ação.</p>
-                <p><strong>Atividades citadas:</strong> webinars sobre abertura do mercado e tarifa social; discussão sobre concentração e concorrência; texto de discussão do setor; portal e infográficos; elaboração de capítulos de livro e análise de contribuições de agentes.</p>
-                <p><strong>Fatores críticos:</strong> engajamento com stakeholders, apoio institucional e potencial de aplicação prática.</p>
-                <p><strong>Instituições citadas:</strong> proponente EDP Transmissão Goiás S.A.; cooperadas EDP Distribuição ES, EDP Distribuição SP e Aliança Transmissora; executoras TECHNE-GESEL. Coordenação indicada: Rubens Rosental e Nivalde de Castro (GESEL). Gerência indicada: Karina Cavallaro (Regulatório).</p>
-              </details>
+              <a class="article-download" href="projeto-novos-desenhos-mercado.html">Conheça o projeto</a>
             </article>
 
             <article class="article-card catalog-card" data-project data-category="transmissao" data-search="capacidade mercado 15000 km linhas subestacoes leiloes 2031 investimento">
               <p class="article-type">Transmissão · Planejamento setorial</p>
               <h3>Capacidade de Mercado</h3>
               <p>Estudo da capacidade do mercado para absorver o plano de investimentos de transmissão previsto até 2031 e identificação de riscos, entraves e ações mitigadoras.</p>
-              <details>
-                <summary>Detalhes do projeto</summary>
-                <p><strong>Escopo citado:</strong> analisar a capacidade do mercado para a implantação de cerca de 15.000 km de novas linhas e 12 subestações, considerando os leilões até 2031.</p>
-                <p><strong>Entregas e método:</strong> metodologia de planejamento setorial com avaliação periódica do mercado; cenários para cadeia produtiva, financiamento, outorgas e licenciamentos; análise de sensibilidade; priorização de investimentos em cenários restritivos; recomendações de mitigação.</p>
-                <p><strong>Nota:</strong> o material não apresenta ficha individual com datas ou equipes para este estudo.</p>
-              </details>
+              <a class="article-download" href="projeto-capacidade-mercado.html">Conheça o projeto</a>
             </article>
           </div>
         </div>
@@ -530,6 +518,12 @@
         filterProjects();
         categoryFilter.focus();
       });
+
+      const requestedCategory = new URLSearchParams(window.location.search).get("frente");
+      if (["geracao", "transmissao", "regulatorio"].includes(requestedCategory)) {
+        categoryFilter.value = requestedCategory;
+      }
+
       filterProjects();
     </script>
   </body>
