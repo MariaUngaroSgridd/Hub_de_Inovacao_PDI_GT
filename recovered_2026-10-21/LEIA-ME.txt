@@ -1,0 +1,6 @@
+Recuperação do histórico local do VS Code em 21/10/2026.
+
+Estes arquivos são cópias e não substituem os arquivos atuais do projeto.
+- index.html: versão salva às 11:45
+- artigos.html: versão salva às 12:55
+- artigos.pt.html: versão salva às 12:55

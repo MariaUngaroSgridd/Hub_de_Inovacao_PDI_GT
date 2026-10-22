@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#212e3e">
+    <meta name="description" content="Artigos e pesquisas sobre hidrogênio verde, hubs industriais, financiamento e armazenamento.">
+    <title>Artigos | Hub de Inovação PDI GT</title>
+    <link rel="stylesheet" href="inner-pages.css">
+      <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="edp-layout.css">
+    <script src="navigation.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="edp-utility-bar">
+      <div class="edp-utility-inner">
+        <a class="edp-global-link" href="https://edp.com/en" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+          <span>EDP Global</span>
+        </a>
+        <div class="edp-utility-controls">
+          <details class="edp-utility-menu">
+            <summary>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" /></svg>
+              <span>EDP in the world</span><i aria-hidden="true"></i>
+            </summary>
+            <div class="edp-utility-dropdown">
+              <a href="https://edp.com/pt-br" target="_blank" rel="noopener noreferrer">Brasil</a>
+              <a href="https://edp.com/en" target="_blank" rel="noopener noreferrer">EDP Global</a>
+            </div>
+          </details>
+          <details class="edp-utility-menu edp-language-menu">
+            <summary>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 4h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-5l-4 4v-4H5a2 2 0 0 1-2-2zM9 8h5M11.5 7v2M8.5 13c2.1-1 3.8-2.8 4.6-5M9.5 10c.9 1.7 2.4 3 4.2 3.7M17 10h4v10h-7v-3" /></svg>
+              <span>PT-BR</span><i aria-hidden="true"></i>
+            </summary>
+            <div class="edp-utility-dropdown">
+              <a href="artigos.pt.html" lang="pt-BR" aria-current="page">Português (Brasil)</a>
+              <a href="artigos.html" lang="en">English</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap header-row">
+        <a class="brand" href="index.pt.html#inicio" aria-label="Hub de Inovação PDI GT, início">
+          <img class="brand-mark" src="assets/edp-logo.png" alt="EDP">
+          <span class="brand-name">
+            <span>Hub de Inovação</span>
+            <span>Pesquisa · Desenvolvimento · Inovação</span>
+          </span>
+        </a>
+        <details class="mobile-navigation" open>
+          <summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg><span>Menu</span></summary>
+          <nav aria-label="Navegação principal">
+          <a href="index.pt.html#inicio">Início</a>
+          <details class="nav-dropdown">
+            <summary>Áreas de Atuação</summary>
+            <div class="nav-submenu">
+              <a href="index.pt.html#geracao">Geração</a>
+              <a href="index.pt.html#transmissao">Transmissão</a>
+            </div>
+          </details>
+          <a href="catalogo-projetos.pt.html">Projetos</a>
+          <a href="artigos.pt.html" aria-current="page">Artigos</a>
+          <a href="premios.pt.html">Prêmios</a>
+          <a href="enviar-ideia.pt.html">Enviar Ideia</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="breadcrumb"><a href="index.pt.html">Início</a><span aria-hidden="true">›</span><span>Artigos</span></p>
+          <p class="eyebrow">Conhecimento em destaque</p>
+          <h1>Artigos e pesquisas</h1>
+          <p class="hero-copy">Livros e artigos do Hub em um só lugar, com filtros por projeto e tema e busca por título, assunto ou autor.</p>
+        </div>
+      </section>
+
+      <section class="content-section filter-section" aria-label="Filtros de projetos e publicações">
+        <div class="wrap">
+          <div class="filter-panel">
+            <div class="filter-field">
+              <label for="project-filter">Projeto</label>
+              <select id="project-filter">
+                <option value="todos">Todos os projetos</option>
+                <option value="hidrogenio-verde">Hidrogênio Verde</option>
+                <option value="barco-eletrico">Barco Elétrico</option>
+                <option value="baterias-ion-li">Baterias Íon-Li</option>
+                <option value="transmissao">Transmissão</option>
+              </select>
+            </div>
+            <div class="filter-field">
+              <label for="topic-filter">Tema</label>
+              <select id="topic-filter">
+                <option value="todos">Todos os temas</option>
+                <option value="livro">Livros</option>
+                <option value="mercado">Mercado e indústria</option>
+                <option value="transporte">Transporte e armazenamento</option>
+                <option value="financiamento">Financiamento e políticas</option>
+                <option value="hubs">Hubs industriais</option>
+                <option value="multimidia">Fotos e vídeos</option>
+                <option value="sensoriamento">Sensoriamento e monitoramento</option>
+                <option value="energia">Energia e desempenho</option>
+              </select>
+            </div>
+            <div class="filter-field filter-search">
+              <label for="publication-search">Buscar</label>
+              <input id="publication-search" type="search" placeholder="Digite um título, tema ou autor">
+            </div>
+            <button class="filter-reset" id="filter-reset" type="button">Limpar filtros</button>
+          </div>
+          <p class="filter-count" id="filter-count" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="content-section" id="publicacoes" data-project-group="hidrogenio-verde" aria-labelledby="articles-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-label">Publicações do Hub</p>
+            <h2 id="articles-title">Artigos e livros</h2>
+            <p>Consulte os resumos e abra os PDFs para ler os livros e artigos completos.</p>
+          </div>
+          <div class="article-grid">
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="livro" data-search-text="livro um caminho para o mercado de hidrogenio baixo carbono brasil ni[...]
+              <p class="article-type">Livro · Projeto Pecém H₂V</p>
+              <h3>Um caminho para o mercado de hidrogênio de baixo carbono no Brasil</h3>
+              <p class="article-meta">Organizadores: Nivalde de Castro, Ana Carolina Chaves, Mauricio Moszkowicz, Eduardo Serra e Sayonara Eliziário. GESEL/UFRJ, em parceria com a EDP, no âmbito do projeto Pecém H₂V.</p>
+              <p>Apresenta uma visão abrangente sobre o desenvolvimento do mercado brasileiro de hidrogênio de baixo carbono, suas oportunidades e desafios em setores como indústria, transporte e energia.</p>
+              <a class="article-download" href="assets/livro-hidrogenio-baixo-carbono-brasil.pdf" target="_blank" rel="noopener noreferrer">Ler livro completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="mercado" data-search-text="green industrial development brazil renewable hydrogen derivatives [....]">
+              <p class="article-type">Mercado e desenvolvimento industrial</p>
+              <h3>Green Industrial Development in Brazil: Opportunities in the National and International Markets for Renewable Hydrogen and Derivatives</h3>
+              <p class="article-meta">Luiza Masseno de Pinho Santiago Leal, Ana Carolina Chaves Catolico, Kalyne Silva Brito e Vinicius José Novaes Braz da Costa.</p>
+              <p>Analisa as condições brasileiras para desenvolver uma indústria de hidrogênio renovável e derivados. O trabalho discute oportunidades de mercado, produção local e a possibilidade de integração entre energia, indústria e exportação.</p>
+              <a class="article-download" href="assets/desenvolvimento-industrial-hidrogenio-renovavel.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="transporte" data-search-text="amonia metanol portadores hidrogenio armazenamento transporte sistema tecnico comparativo">
+              <p class="article-type">Transporte e armazenamento</p>
+              <h3>Análise comparativa dos parâmetros técnicos da amônia e do metanol como portadores de hidrogênio</h3>
+              <p class="article-meta">Sofia Paoli, Kalyne Brito, José Vinícius Freitas e Thereza Aquino.</p>
+              <p>Compara amônia, metanol e hidrogênio líquido como alternativas para transporte e armazenamento. Amônia e metanol podem armazenar mais energia por volume, mas envolvem perdas, segurança e infraestrutura específicas.</p>
+              <a class="article-download" href="assets/portadores-amonia-metanol.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="financiamento" data-search-text="financing green hydrogen projects german australian brazil financing role public support">
+              <p class="article-type">Financiamento e políticas públicas · 2022</p>
+              <h3>The Role of Financing in Green Hydrogen Projects: The German, Australian and Brazilian Cases</h3>
+              <p class="article-meta">Thereza Aquino, Roberto Ivo, Vinicius Botelho, Ana Carolina Chaves, Lourival Teixeira, Cayo Moraes, Diego Rebouças e Willamy Conde. 5th International Conference on Energy and Environment, 2022.</p>
+              <p>Compara estruturas de financiamento para projetos de hidrogênio verde na Alemanha, Austrália e Brasil. O estudo destaca a importância do apoio público para reduzir riscos e viabilizar investimentos.</p>
+              <a class="article-download" href="assets/financiamento-projetos-hidrogenio-verde-2022.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="hubs" data-search-text="industrial clusters hydrogen economy united states europe australia hub development comparison">
+              <p class="article-type">Hubs industriais e economia do hidrogênio · 2024</p>
+              <h3>The Role of Industrial Clusters in the Development of the Hydrogen Economy: A Comparison between United States, Europe, Australia</h3>
+              <p class="article-meta">Kalyne Brito, Ana Carolina Chaves, Thereza Aquino, Luiza Masseno e Caroline Chantre. 6th International Conference on Energy and Environment, Guimarães, Portugal, 2024.</p>
+              <p>Examina políticas e experiências de hubs de hidrogênio nos Estados Unidos, na Europa e na Austrália. O artigo aborda como infraestrutura, proximidade entre produtores e consumidores e governança podem acelerar a transição.</p>
+              <a class="article-download" href="assets/hubs-industriais-hidrogenio-2024.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="hidrogenio-verde" data-topic="mercado" data-search-text="die entwicklung marktes grunen wasserstoff brasilien internationale zusammenarbeit deutsch brasil">
+              <p class="article-type">Mercado brasileiro e cooperação internacional · Alemão</p>
+              <h3>Die Entwicklung des Marktes für grünen Wasserstoff in Brasilien und Möglichkeiten der internationalen Zusammenarbeit</h3>
+              <p class="article-meta">Luiza Masseno Leal, Vinicius José Braz, Thereza Aquino, Ana Carolina Chaves e Maurício Moszkowicz.</p>
+              <p>Discute o desenvolvimento do mercado de hidrogênio verde no Brasil e possibilidades de cooperação internacional, com destaque para a relação Brasil–Alemanha. O arquivo ressalta oportunidades estratégicas e desafios de escala.</p>
+              <a class="article-download" href="assets/mercado-hidrogenio-brasil-cooperacao-alemanha.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF em alemão)</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button" href="projeto-hidrogenio-verde.pt.html">Conheça a iniciativa</a>
+            <a class="button button-secondary" href="index.pt.html">Voltar ao início</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="publicacoes-transmissao" data-project-group="transmissao" aria-labelledby="transmissao-articles-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-label">Publicações de transmissão</p>
+            <h2 id="transmissao-articles-title">Artigos de RCM em Transmissão</h2>
+            <p>Artigos sobre manutenção centrada em confiabilidade, prognóstico de falhas e gestão da saúde de equipamentos em subestações e sistemas de transmissão.</p>
+          </div>
+          <div class="article-grid">
+            <article class="article-card" data-filterable data-project="transmissao" data-topic="sensoriamento" data-search-text="estrutura multicriterio selecionar tecnicas aprendizado maquina prognostico falhas industriais">
+              <p class="article-type">Artigo técnico · Prognóstico de falhas</p>
+              <h3>Uma estrutura multicritério para selecionar técnicas de aprendizado de máquina para prognóstico de falhas industriais</h3>
+              <p class="article-meta">Artigo da área de RCM em Transmissão.</p>
+              <p>Apresenta uma estrutura de critérios para apoiar a escolha de técnicas de aprendizado de máquina aplicadas ao prognóstico de falhas em ambientes industriais.</p>
+              <a class="article-download" href="assets/A_MULT~1.PDF" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="transmissao" data-topic="energia" data-search-text="criterios estender planos manutencao preventiva subestacoes diagramas blocos confiabilidade">
+              <p class="article-type">Artigo técnico · Manutenção preventiva</p>
+              <h3>Critérios para estender planos de manutenção preventiva em subestações usando diagramas de blocos de confiabilidade</h3>
+              <p class="article-meta">Artigo da área de RCM em Transmissão.</p>
+              <p>Discute critérios para ampliar os intervalos dos planos de manutenção preventiva em subestações, com apoio de diagramas de blocos de confiabilidade.</p>
+              <a class="article-download" href="assets/energies-19-02604.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+
+            <article class="article-card" data-filterable data-project="transmissao" data-topic="sensoriamento" data-search-text="prognostico probabilistico gestao saude transformadores potencia dados sensores analise gases dissolvidos poligonos Duval">
+              <p class="article-type">Artigo técnico · Transformadores de potência</p>
+              <h3>Prognóstico probabilístico e gestão da saúde de transformadores de potência com dados de sensores de análise de gases dissolvidos e polígonos de Duval</h3>
+              <p class="article-meta">Artigo da área de RCM em Transmissão.</p>
+              <p>Aborda o uso de dados de análise de gases dissolvidos e dos polígonos de Duval para avaliar a condição e estimar a saúde de transformadores de potência.</p>
+              <a class="article-download" href="assets/sensors-25-06520%20(1).pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button" href="index.pt.html#transmissao">Conheça a área de Transmissão</a>
+            <a class="button button-secondary" href="index.pt.html">Voltar ao início</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="publicacoes-baterias" data-project-group="baterias-ion-li" aria-labelledby="baterias-articles-title">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-label">Publicações de Armazenamento e Baterias</p>
+            <h2 id="baterias-articles-title">Artigos do Projeto Baterias Íon-Li</h2>
+            <p>Artigos e revisões sobre sistemas de armazenamento em baterias de íons de lítio integrados à geração fotovoltaica para serviços auxiliares e resiliência de subestações de transmissão.</p>
+          </div>
+          <div class="article-grid">
+            <article class="article-card" data-filterable data-project="baterias-ion-li" data-topic="energia" data-search-text="systematic literature review li-ion besss integrated photovoltaic systems power supply auxiliary services high-voltage power stations baterias ion-li sergio pires pimentel marcelo nogueira bousquet energies 2025">
+              <p class="article-type">Artigo científico · Revisão Sistemática (Energies 2025)</p>
+              <h3>A Systematic Literature Review on Li-Ion BESSs Integrated with Photovoltaic Systems for Power Supply to Auxiliary Services in High-Voltage Power Stations</h3>
+              <p class="article-meta">Sérgio Pires Pimentel, Marcelo Nogueira Bousquet, Tiago Alves Barros Rosa, Leovir Cardoso Aleluia Junior, Enes Gonçalves Marra, José Wilson Lima Nerys e Luciano Coutinho Gomes. <em>Energies</em> 2025, 18(13), 3544. DOI: 10.3390/en18133544.</p>
+              <p>Revisão sistemática de literatura estruturada sob as diretrizes PRISMA 2020. Avalia a viabilidade técnica, benefícios e desafios da integração de bancos de baterias de íons de lítio (LiFePO4) com geração fotovoltaica para alimentação ininterrupta dos serviços auxiliares e partida a frio (Black Start) de subestações de transmissão.</p>
+              <a class="article-download" href="assets/energies-18-03544.pdf" target="_blank" rel="noopener noreferrer">Ler artigo completo (PDF)</a>
+            </article>
+          </div>
+          <div class="page-actions">
+            <a class="button" href="projeto-baterias-ion-li.pt.html">Conheça o projeto Baterias Íon-Li</a>
+            <a class="button button-secondary" href="index.pt.html">Voltar ao início</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="edp-footer">
+      <div class="edp-footer-main">
+        <div class="wrap edp-footer-top">
+          <a class="edp-logo" href="https://edp.com/pt-br/america-do-sul/brasil/projetos" aria-label="EDP, site oficial" target="_blank" rel="noopener noreferrer">
+            <img class="edp-logo-mark" src="assets/aaaaaaaaaaaaaaaaaaaaaaaa.jfif" alt="">
+          </a>
+          <section class="edp-carbon" aria-label="Emissões de carbono por visualização">
+            <div class="edp-carbon-heading">
+              <svg viewBox="0 0 32 24" aria-hidden="true" focusable="false">
+                <path d="M9.2 20.5h15.1a5.2 5.2 0 0 0 .3-10.4A8.3 8.3 0 0 0 9 7.9a6.3 6.3 0 0 0 .2 12.6Z" />
+                <path d="M7.1 11.2a4.7 4.7 0 0 0-1 9.3h1.1" />
+              </svg>
+              <strong>Emissões de carbono</strong>
+            </div>
+            <p class="edp-carbon-value">0.023g CO<sub>2</sub> / visualização.</p>
+            <div class="edp-carbon-scale" aria-label="Classificação A+">
+              <span class="grade-a-plus">A+</span><span class="grade-a">A</span><span class="grade-b">B</span><span class="grade-c">C</span><span class="grade-d">D</span><span class="grade-e">E</span><span class="grade-f">F</span>
+              <span class="edp-carbon-current" aria-hidden="true">A+</span>
+            </div>
+            <a href="https://edp.com/en/responsible-action/environment/sustainable-web" target="_blank" rel="noopener noreferrer">Veja como foi calculado</a>
+          </section>
+        </div>
+
+        <div class="wrap edp-footer-links">
+          <section class="edp-footer-group" aria-labelledby="footer-quick-title">
+            <h2 id="footer-quick-title">Links Rápidos</h2>
+            <ul>
+              <li><span aria-hidden="true">◎</span><a href="https://edp.com/pt-br/america-do-sul/brasil" target="_blank" rel="noopener noreferrer">Nos escolhemos a Terra</a></li>
+              <li><span aria-hidden="true">▱</span><a href="https://jobs.edp.com/" target="_blank" rel="noopener noreferrer">Trabalhe Conosco</a></li>
+              <li><span aria-hidden="true">▷</span><a href="https://edp.com/pt-br/america-do-sul/brasil/imprensa/noticias" target="_blank" rel="noopener noreferrer">Notícias e Imprensa</a></li>
+            </ul>
+          </section>
+          <section class="edp-footer-group" aria-labelledby="footer-about-title">
+            <h2 id="footer-about-title">Sobre a EDP</h2>
+            <ul>
+              <li><a href="https://edp.com/pt/sobre-nos/a-nossa-empresa/missao-visao-valores" target="_blank" rel="noopener noreferrer">Nossa missão</a></li>
+              <li><a href="https://edp.com/pt-br/america-do-sul/brasil/como-operamos" target="_blank" rel="noopener noreferrer">Governança Corporativa</a></li>
+              <li><a href="https://edp.com/en/what-we-do" target="_blank" rel="noopener noreferrer">O que fazemos</a></li>
+            </ul>
+          </section>
+          <section class="edp-footer-group" aria-labelledby="footer-impact-title">
+            <h2 id="footer-impact-title">Nosso impacto</h2>
+            <ul>
+              <li><a href="https://edp.com/en/responsible-action/environment" target="_blank" rel="noopener noreferrer">Ambiente</a></li>
+              <li><a href="https://edp.com/pt/carreiras/dentro-da-edp/diversidade-inclusao" target="_blank" rel="noopener noreferrer">Diversidade e inclusão</a></li>
+            </ul>
+          </section>
+          <section class="edp-footer-group" aria-labelledby="footer-connected-title">
+            <h2 id="footer-connected-title">Mantenha-se conectado</h2>
+            <ul>
+              <li><a href="https://edp.com/en/investors/investor-information" target="_blank" rel="noopener noreferrer">Informações para investidores</a></li>
+              <li><a href="https://edp.com/pt/media/kit-imprensa" target="_blank" rel="noopener noreferrer">Kit de imprensa</a></li>
+              <li><a href="https://edp.com/en/responsible-action/transparency-and-reports/esg-ratings" target="_blank" rel="noopener noreferrer">Avaliações ESG</a></li>
+            </ul>
+          </section>
+          <section class="edp-footer-group" aria-labelledby="footer-purpose-title">
+            <h2 id="footer-purpose-title">O que nos motiva</h2>
+            <ul>
+              <li><a href="https://edp.com/en/what-we-do/driving-energy-change" target="_blank" rel="noopener noreferrer">Transição energética</a></li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="wrap edp-footer-divider"></div>
+
+        <div class="wrap edp-footer-bottom">
+          <address>
+            <strong>EDP na América do Sul - Sede Corporativa</strong>
+            <span>Rua Werner Von Siemens, 111 - Prédio 22 – Lapa</span>
+            <span>CEP 05069-010 - São Paulo/SP</span>
+            <span>Brasil</span>
+          </address>
+          <div class="edp-social">
+            <h2>Siga a EDP</h2>
+            <ul>
+              <li><a href="https://www.linkedin.com/company/edp" aria-label="EDP no LinkedIn" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">in</span></a></li>
+              <li><a href="https://www.youtube.com/@edp" aria-label="EDP no YouTube" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span></a></li>
+              <li><a href="https://www.instagram.com/edp/" aria-label="EDP no Instagram" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◎</span></a></li>
+              <li><a href="https://www.facebook.com/edp/" aria-label="EDP no Facebook" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">f</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="edp-footer-legal">
+        <div class="wrap">
+          <a href="https://edp.com/pt-br/america-do-sul/brasil/politica-de-privacidade" target="_blank" rel="noopener noreferrer">Dados Pessoais</a>
+          <a href="https://edp.com/pt-br/america-do-sul/brasil/politica-de-cookies" target="_blank" rel="noopener noreferrer">Sobre Cookies</a>
+          <a href="https://edp.com/pt-br/america-do-sul/brasil/protecao-de-dados-pessoais-e-seguranca-da-informacao" target="_blank" rel="noopener noreferrer">Sua Privacidade</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const projectFilter = document.querySelector("#project-filter");
+      const topicFilter = document.querySelector("#topic-filter");
+      const searchInput = document.querySelector("#publication-search");
+      const filterCount = document.querySelector("#filter-count");
+      const filterableItems = [...document.querySelectorAll("[data-filterable]")];
+      const projectGroups = [...document.querySelectorAll("[data-project-group]")];
+
+      function filterProjects() {
+        const project = projectFilter.value;
+        const topic = topicFilter.value;
+        const normalizeText = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+        const query = normalizeText(searchInput.value.trim());
+        let visibleCount = 0;
+
+        for (const item of filterableItems) {
+          const matchesProject = project === "todos" || item.dataset.project === project || (project === "transmissao" && item.dataset.project === "baterias-ion-li");
+          const matchesTopic = topic === "todos" || item.dataset.topic === topic;
+          const matchesQuery = !query || normalizeText(item.dataset.searchText).includes(query);
+          const visible = matchesProject && matchesTopic && matchesQuery;
+          item.hidden = !visible;
+          if (visible) visibleCount += 1;
+        }
+
+        for (const group of projectGroups) {
+          const matchesProject = project === "todos" || group.dataset.projectGroup === project || (project === "transmissao" && group.dataset.projectGroup === "baterias-ion-li");
+          const hasVisibleItems = group.querySelector("[data-filterable]:not([hidden])");
+          group.hidden = !matchesProject || !hasVisibleItems;
+        }
+
+        filterCount.textContent = `${visibleCount} ${visibleCount === 1 ? "resultado encontrado" : "resultados encontrados"}`;
+      }
+
+      projectFilter.addEventListener("change", filterProjects);
+      topicFilter.addEventListener("change", filterProjects);
+      searchInput.addEventListener("input", filterProjects);
+      document.querySelector("#filter-reset").addEventListener("click", () => {
+        projectFilter.value = "todos";
+        topicFilter.value = "todos";
+        searchInput.value = "";
+        filterProjects();
+        projectFilter.focus();
+      });
+      filterProjects();
+    </script>
+  </body>
+</html>
