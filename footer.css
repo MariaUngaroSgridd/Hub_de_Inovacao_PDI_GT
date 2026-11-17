@@ -352,6 +352,11 @@
   text-align: center;
 }
 
+.edp-footer-date {
+  display: block;
+  margin-top: 0.5rem;
+}
+
 .edp-footer-legal .wrap {
   display: flex;
   flex-wrap: wrap;
