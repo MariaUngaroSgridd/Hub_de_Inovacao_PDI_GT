@@ -344,6 +344,14 @@
   color: #2536bf;
 }
 
+.edp-footer-author {
+  padding: 0 24px 1.5rem;
+  background: #f4f7f6;
+  color: #2536bf;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
 .edp-footer-legal .wrap {
   display: flex;
   flex-wrap: wrap;
